@@ -19,12 +19,12 @@ const Testimonials = () => {
   return (
     <section id="prova" className="container mx-auto px-4 py-16 md:py-24 max-w-7xl">
       <div className="space-y-12">
-        <div className="space-y-3">
+        <div className="text-center space-y-3 max-w-3xl mx-auto">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-black tracking-tight">
             Resultados de quem aplicou
           </h2>
           <p className="text-lg text-muted-foreground">
-            Advogados criminalistas que implementaram a estrutura
+            Advogados criminalistas que estruturaram seu marketing digital
           </p>
         </div>
 

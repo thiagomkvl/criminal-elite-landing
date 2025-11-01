@@ -32,7 +32,7 @@ const Results = () => {
             Resultados esperados
           </h2>
           <p className="text-lg text-muted-foreground">
-            Benefícios práticos para advogados que implementam a estrutura
+            O que muda quando você tem uma estrutura digital profissional rodando
           </p>
         </div>
 
