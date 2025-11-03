@@ -1,19 +1,30 @@
 import { Button } from "@/components/ui/button";
-import heroBg from "@/assets/background-lp-criminal.png";
+import heroBgDesktop from "@/assets/background-lp-criminal";
+import heroBgMobile from "@/assets/hero-criminal-mobile.png";
 
 const Hero = () => {
   return (
     <section className="relative overflow-hidden bg-[#0b0606] min-h-[90vh] md:min-h-[100vh] flex items-center">
       {/* BACKGROUND */}
       <div className="absolute -inset-[2px] pointer-events-none">
+        {/* Mobile background */}
         <img
-          src={heroBg}
-          alt="Criminal Elite"
+          src={heroBgMobile}
+          alt="Criminal Elite Mobile"
           className={`
-            w-full h-full object-cover
-            /* MOBILE: centraliza o rosto e traz mais à esquerda */
-            object-[58%_38%]
-            /* DESKTOP: mantém o enquadramento aprovado */
+            w-full h-full object-cover md:hidden
+            object-[50%_35%] opacity-95
+            [backface-visibility:hidden] [transform:translateZ(0)]
+          `}
+          loading="eager"
+        />
+
+        {/* Desktop background */}
+        <img
+          src={heroBgDesktop}
+          alt="Criminal Elite Desktop"
+          className={`
+            hidden md:block w-full h-full object-cover
             md:object-[70%_center] lg:object-[72%_center]
             opacity-95 [backface-visibility:hidden] [transform:translateZ(0)]
           `}
@@ -22,15 +33,14 @@ const Hero = () => {
       </div>
 
       {/* OVERLAYS */}
-      {/* Gradiente lateral para contraste do texto (inalterado) */}
+      {/* Gradiente lateral (inalterado) */}
       <div className="absolute inset-y-0 left-0 w-[85%] xs:w-[78%] sm:w-[66%] md:w-[60%] lg:w-[58%] bg-gradient-to-r from-black via-black/85 to-transparent pointer-events-none" />
 
-      {/* Radial discreto no fundo (mantido) */}
+      {/* Radial discreto (mantido) */}
       <div className="absolute inset-0 bg-[radial-gradient(900px_600px_at_22%_40%,rgba(220,38,38,0.08),transparent)] pointer-events-none" />
 
-      {/* MOBILE: sombra suave para leitura sobre a foto */}
+      {/* MOBILE: sombra suave para leitura */}
       <div className="absolute inset-0 bg-black/45 md:hidden pointer-events-none" />
-      {/* ↑ ajuste /45 → /40 ou /55 se quiser mais ou menos escuro */}
 
       {/* CONTEÚDO */}
       <div className="relative z-10 w-full h-full grid">
