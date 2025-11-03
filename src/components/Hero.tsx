@@ -3,28 +3,26 @@ import heroBg from "@/assets/background-lp-criminal.png";
 
 const Hero = () => {
   return (
-    <section className="relative flex items-center min-h-[85vh] overflow-hidden bg-[#0b0606]">
+    <section className="relative flex items-center min-h-[90vh] overflow-hidden bg-[#0b0606]">
       {/* BACKGROUND IMAGE */}
-      <div className="absolute inset-0 flex justify-end">
+      <div className="absolute inset-0">
         <img
           src={heroBg}
           alt="Criminal Elite"
           className="
-            h-full w-auto
-            max-w-none
-            object-contain
-            object-center
-            scale-[0.92]
-            translate-x-[6%]
-            md:translate-x-[8%]
-            lg:translate-x-[10%]
+            w-full h-full
+            object-cover md:object-contain
+            object-[75%_center]
+            scale-[0.88]
+            md:scale-[0.92]
             opacity-95
-            transition-all duration-500 ease-out
+            translate-x-[-5%]
+            transition-all duration-700 ease-out
           "
         />
-        {/* Gradiente escuro no lado esquerdo */}
-        <div className="absolute inset-y-0 left-0 w-[58%] bg-gradient-to-r from-black via-black/85 to-transparent" />
-        {/* Vinheta vermelha suave */}
+        {/* Gradiente escuro (lado esquerdo) */}
+        <div className="absolute inset-y-0 left-0 w-[60%] bg-gradient-to-r from-black via-black/85 to-transparent" />
+        {/* Vinheta vermelha sutil */}
         <div className="absolute inset-0 bg-[radial-gradient(900px_600px_at_25%_40%,rgba(220,38,38,0.08),transparent)]" />
       </div>
 
