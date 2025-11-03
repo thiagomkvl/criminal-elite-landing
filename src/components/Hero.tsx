@@ -11,9 +11,9 @@ const Hero = () => {
           alt="Criminal Elite"
           className={`
             w-full h-full object-cover
-            /* MOBILE: traz o rosto para a área do texto */
-            object-[68%_38%]
-            /* DESKTOP (mantido exatamente como aprovado) */
+            /* MOBILE: centraliza o rosto e traz mais à esquerda */
+            object-[58%_38%]
+            /* DESKTOP: mantém o enquadramento aprovado */
             md:object-[70%_center] lg:object-[72%_center]
             opacity-95 [backface-visibility:hidden] [transform:translateZ(0)]
           `}
@@ -22,15 +22,15 @@ const Hero = () => {
       </div>
 
       {/* OVERLAYS */}
-      {/* Gradiente lateral (mantém legibilidade e NÃO muda no desktop) */}
+      {/* Gradiente lateral para contraste do texto (inalterado) */}
       <div className="absolute inset-y-0 left-0 w-[85%] xs:w-[78%] sm:w-[66%] md:w-[60%] lg:w-[58%] bg-gradient-to-r from-black via-black/85 to-transparent pointer-events-none" />
 
-      {/* Radial discreto (mantido) */}
+      {/* Radial discreto no fundo (mantido) */}
       <div className="absolute inset-0 bg-[radial-gradient(900px_600px_at_22%_40%,rgba(220,38,38,0.08),transparent)] pointer-events-none" />
 
-      {/* MOBILE-ONLY: sombra global para leitura sobre a foto */}
-      <div className="absolute inset-0 bg-black/48 md:hidden pointer-events-none" />
-      {/* se quiser mais/menos sombra: troque /48 por /40, /55 etc. */}
+      {/* MOBILE: sombra suave para leitura sobre a foto */}
+      <div className="absolute inset-0 bg-black/45 md:hidden pointer-events-none" />
+      {/* ↑ ajuste /45 → /40 ou /55 se quiser mais ou menos escuro */}
 
       {/* CONTEÚDO */}
       <div className="relative z-10 w-full h-full grid">
@@ -43,7 +43,7 @@ const Hero = () => {
             text-left text-white space-y-5
           "
         >
-          {/* TÍTULO com quebras controladas APENAS no mobile */}
+          {/* TÍTULO */}
           <h1
             className="
               text-[1.85rem] leading-[1.12]
@@ -53,25 +53,31 @@ const Hero = () => {
               max-w-[26rem] sm:max-w-none
             "
           >
-            {/* MOBILE (força linhas boas) */}
+            {/* MOBILE: quebras controladas */}
             <span className="sm:hidden">
-              Estrutura para <span className="text-red-500 whitespace-nowrap">Advogado Criminal</span>
+              Estrutura para{" "}
+              <span className="text-red-500 whitespace-nowrap">
+                Advogado Criminal
+              </span>
               <br />
               captar com urgência e
               <br />
               previsibilidade
             </span>
 
-            {/* DESKTOP (mantém exatamente como estava) */}
+            {/* DESKTOP: sem alterações */}
             <span className="hidden sm:inline">
               Estrutura para{" "}
-              <span className="text-red-500 whitespace-nowrap">Advogado Criminal</span>{" "}
+              <span className="text-red-500 whitespace-nowrap">
+                Advogado Criminal
+              </span>{" "}
               captar com urgência e previsibilidade
             </span>
           </h1>
 
           <p className="text-[0.97rem] sm:text-base md:text-lg text-white/85 max-w-[92%]">
-            Receba uma estrutura completa de marketing jurídico pronta para gerar novos clientes em até 7 dias
+            Receba uma estrutura completa de marketing jurídico pronta para gerar
+            novos clientes em até 7 dias
           </p>
 
           <div className="pt-2 flex flex-col sm:flex-row gap-3 sm:gap-4">
