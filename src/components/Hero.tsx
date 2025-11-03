@@ -3,50 +3,34 @@ import heroBg from "@/assets/background-lp-criminal.png";
 
 const Hero = () => {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-[#0b0606] via-[#0b0606] to-[#100909]">
-      {/* altura da dobra */}
-      <div className="h-[80vh] md:h-[92vh] min-h-[640px] relative">
+    <section className="relative overflow-hidden bg-[#0b0606]">
+      {/* gradiente escuro para dar contraste ao texto (não cobre a imagem) */}
+      <div className="pointer-events-none absolute inset-y-0 left-0 w-1/2 bg-gradient-to-r from-black via-black/70 to-transparent z-0" />
+      {/* leve vinheta vermelha */}
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(1000px_600px_at_20%_40%,rgba(220,38,38,0.08),transparent)] z-0" />
 
-        {/* IMAGEM: inteira, mais distante, ancorada à direita */}
-        <img
-          src={heroBg}
-          alt="Criminal Elite"
-          className="
-            pointer-events-none select-none
-            absolute right-0 inset-y-0
-            h-full w-auto object-contain
-            md:translate-x-6        /* leve afastamento */
-            scale-[0.9] md:scale-[0.84] /* deixa mais distante/menor */
-          "
-          loading="eager"
-        />
+      {/* container + GRID 2 colunas */}
+      <div className="container mx-auto px-4">
+        <div className="relative z-10 grid grid-cols-12 gap-6 items-center h-[85vh] min-h-[640px]">
 
-        {/* GRADIENTE PRETO à esquerda para texto */}
-        <div className="absolute inset-y-0 left-0 w-1/2 md:w-[56%] bg-gradient-to-r from-black via-black/70 to-transparent z-10" />
-
-        {/* Vignette sutil para integrar */}
-        <div className="absolute inset-0 bg-[radial-gradient(1200px_600px_at_20%_40%,rgba(220,38,38,0.08),transparent)] z-10" />
-
-        {/* CONTEÚDO */}
-        <div className="relative z-20 h-full container mx-auto px-4">
-          <div className="h-full flex flex-col items-center justify-center text-center text-white">
-            <div className="max-w-[980px] space-y-6">
+          {/* COLUNA ESQUERDA — TEXTO */}
+          <div className="col-span-12 md:col-span-6 text-white">
+            <div className="max-w-[680px] space-y-6">
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-black leading-[1.05] tracking-tight">
                 Estrutura profissional no{" "}
                 <span className="text-red-500">Criminal</span> para captar com
                 urgência e previsibilidade
               </h1>
 
-              <p className="text-base md:text-xl text-white/80 max-w-3xl mx-auto">
+              <p className="text-base md:text-xl text-white/85">
                 Receba uma estrutura completa de marketing jurídico pronta para gerar
                 novos clientes em até 7 dias
               </p>
 
-              <div className="pt-4 flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="pt-4 flex flex-col sm:flex-row gap-4">
                 <Button variant="hero" size="lg" className="w-full sm:w-auto" asChild>
                   <a href="#condicao">Quero essa estrutura</a>
                 </Button>
-
                 <Button
                   variant="outline"
                   size="lg"
@@ -64,8 +48,23 @@ const Hero = () => {
               </div>
             </div>
           </div>
-        </div>
 
+          {/* COLUNA DIREITA — IMAGEM (inteira, sem cortes) */}
+          <div className="col-span-12 md:col-span-6 relative h-full flex items-end md:items-center justify-end">
+            <img
+              src={heroBg}
+              alt="Criminal Elite"
+              loading="eager"
+              className="
+                h-[70vh] md:h-[80vh] max-h-[82vh]
+                w-auto object-contain   /* nunca corta */
+                ml-auto                  /* encosta à direita */
+                -mr-2 md:mr-0            /* ajuste fino de respiro */
+              "
+            />
+          </div>
+
+        </div>
       </div>
     </section>
   );
