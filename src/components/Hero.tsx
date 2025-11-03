@@ -1,12 +1,10 @@
-"use client";
-import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import heroBg from "@/assets/background-lp-criminal.png";
 
 const Hero = () => {
   return (
     <section className="relative overflow-hidden bg-[#0b0606] min-h-[90vh] md:min-h-[100vh] flex items-center">
-      {/* BACKGROUND */}
+      {/* BACKGROUND com bleed anti-borda */}
       <div className="absolute -inset-[2px] pointer-events-none">
         <img
           src={heroBg}
@@ -27,10 +25,7 @@ const Hero = () => {
 
       {/* CONTEÚDO */}
       <div className="relative z-10 w-full h-full grid">
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
+        <div
           className="
             self-center
             w-full max-w-[780px]
@@ -39,10 +34,7 @@ const Hero = () => {
             text-left text-white space-y-5
           "
         >
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2, duration: 0.8, ease: "easeOut" }}
+          <h1
             className="
               text-[1.85rem] leading-[1.12]
               sm:text-[2.2rem] sm:leading-[1.12]
@@ -50,29 +42,17 @@ const Hero = () => {
               lg:text-6xl font-extrabold tracking-tight
             "
           >
-            Estrutura para{" "}
-            <span className="text-red-500 whitespace-nowrap">
-              Advogado Criminal
-            </span>{" "}
-            captar com urgência e previsibilidade
-          </motion.h1>
+            <span className="whitespace-nowrap">Estrutura profissional</span>{" "}
+            no <span className="text-red-500">Criminal</span> para captar com
+            urgência e previsibilidade
+          </h1>
 
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.35, duration: 0.8, ease: "easeOut" }}
-            className="text-[0.97rem] sm:text-base md:text-lg text-white/85 max-w-[92%]"
-          >
+          <p className="text-[0.97rem] sm:text-base md:text-lg text-white/85 max-w-[92%]">
             Receba uma estrutura completa de marketing jurídico pronta para gerar
             novos clientes em até 7 dias
-          </motion.p>
+          </p>
 
-          <motion.div
-            initial={{ opacity: 0, y: 15 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5, duration: 0.8, ease: "easeOut" }}
-            className="pt-2 flex flex-col sm:flex-row gap-3 sm:gap-4"
-          >
+          <div className="pt-2 flex flex-col sm:flex-row gap-3 sm:gap-4">
             <Button variant="hero" size="lg" className="w-full sm:w-auto" asChild>
               <a href="#condicao">Quero essa estrutura</a>
             </Button>
@@ -90,8 +70,8 @@ const Hero = () => {
                 Falar no WhatsApp
               </a>
             </Button>
-          </motion.div>
-        </motion.div>
+          </div>
+        </div>
       </div>
     </section>
   );
