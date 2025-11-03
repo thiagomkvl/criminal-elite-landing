@@ -11,17 +11,17 @@ const Hero = () => {
           alt="Criminal Elite"
           className="
             w-full h-full
-            object-cover md:object-contain
-            object-[75%_center]
-            scale-[0.88]
-            md:scale-[0.92]
+            object-cover
+            object-[70%_center]
+            scale-[0.96]
             opacity-95
-            translate-x-[-5%]
             transition-all duration-700 ease-out
           "
         />
-        {/* Gradiente escuro (lado esquerdo) */}
+
+        {/* Gradiente escuro no lado esquerdo */}
         <div className="absolute inset-y-0 left-0 w-[60%] bg-gradient-to-r from-black via-black/85 to-transparent" />
+
         {/* Vinheta vermelha sutil */}
         <div className="absolute inset-0 bg-[radial-gradient(900px_600px_at_25%_40%,rgba(220,38,38,0.08),transparent)]" />
       </div>
