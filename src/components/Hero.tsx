@@ -29,20 +29,27 @@ const Hero = () => {
           className="
             self-center
             w-full max-w-[780px]
-            /* Mobile confortável */
             px-5 sm:px-6
-            /* Desktop: empurra pro canto esquerdo que você marcou */
             md:pl-[6vw] lg:pl-[8vw] xl:pl-[10vw] md:pr-0
             text-left text-white space-y-5
           "
         >
-          <h1 className="text-[1.85rem] leading-[1.12] sm:text-[2.2rem] sm:leading-[1.12] md:text-5xl md:leading-[1.1] lg:text-6xl font-extrabold tracking-tight">
-            Estrutura profissional no <span className="text-red-500">Criminal</span> para captar com
+          <h1
+            className="
+              text-[1.85rem] leading-[1.12]
+              sm:text-[2.2rem] sm:leading-[1.12]
+              md:text-5xl md:leading-[1.1]
+              lg:text-6xl font-extrabold tracking-tight
+            "
+          >
+            <span className="whitespace-nowrap">Estrutura profissional</span>{" "}
+            no <span className="text-red-500">Criminal</span> para captar com
             urgência e previsibilidade
           </h1>
 
           <p className="text-[0.97rem] sm:text-base md:text-lg text-white/85 max-w-[92%]">
-            Receba uma estrutura completa de marketing jurídico pronta para gerar novos clientes em até 7 dias
+            Receba uma estrutura completa de marketing jurídico pronta para gerar
+            novos clientes em até 7 dias
           </p>
 
           <div className="pt-2 flex flex-col sm:flex-row gap-3 sm:gap-4">
@@ -57,7 +64,8 @@ const Hero = () => {
             >
               <a
                 href="https://wa.me/48999379752?text=Quero+avancar+com+a+estrutura+digital"
-                target="_blank" rel="noopener noreferrer"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 Falar no WhatsApp
               </a>
