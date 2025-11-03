@@ -17,7 +17,7 @@ const Testimonials = () => {
   ];
 
   return (
-    <section id="prova" className="container mx-auto px-4 py-16 md:py-24 max-w-7xl">
+    <section id="prova" className="container mx-auto px-4 py-8 md:py-12 max-w-7xl">
       <div className="space-y-12">
         <div className="text-center space-y-3 max-w-3xl mx-auto">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-black tracking-tight">

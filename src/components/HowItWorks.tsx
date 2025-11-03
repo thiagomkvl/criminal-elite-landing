@@ -1,24 +1,36 @@
-import { Rocket, Target, Zap } from "lucide-react";
+import { FileText, Target, Zap, Settings, TrendingUp } from "lucide-react";
 
 const HowItWorks = () => {
   const steps = [
     {
-      icon: Rocket,
+      icon: FileText,
       number: "01",
-      title: "Receba a estrutura completa",
-      description: "Acesso imediato a todos os arquivos: perfil, anúncios, roteiro de WhatsApp e estratégias validadas"
+      title: "Análise do seu nicho e público-alvo",
+      description: "Identificamos exatamente quem são seus clientes ideais e onde encontrá-los"
     },
     {
       icon: Target,
       number: "02",
-      title: "Implemente em até 7 dias",
-      description: "Siga o checklist detalhado para publicar perfil, lançar campanhas e configurar automação"
+      title: "Ajuste posicionamento digital do escritório",
+      description: "Definimos como seu escritório será percebido online para atrair os casos certos"
     },
     {
       icon: Zap,
       number: "03",
-      title: "Comece a receber clientes",
-      description: "Contatos qualificados começam a chegar através dos anúncios e você fecha com o roteiro pronto"
+      title: "Desenvolvimento Estratégico",
+      description: "Criamos sua landing page, campanhas e roteiros personalizados"
+    },
+    {
+      icon: Settings,
+      number: "04",
+      title: "Configuração completa das campanhas",
+      description: "Implementamos tudo pronto: anúncios, pixels, integrações e automações"
+    },
+    {
+      icon: TrendingUp,
+      number: "05",
+      title: "Primeiros Resultados em até 7 dias",
+      description: "Sua estrutura estará gerando consultas qualificadas na primeira semana"
     }
   ];
 
@@ -30,11 +42,11 @@ const HowItWorks = () => {
             Como funciona
           </h2>
           <p className="text-lg text-muted-foreground">
-            Do acesso à estrutura até seus primeiros clientes em 3 passos simples
+            Nós fazemos tudo por você — do planejamento aos primeiros resultados
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 relative">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 relative">
           {/* Connection line for desktop */}
           <div className="hidden md:block absolute top-12 left-[16.666%] right-[16.666%] h-0.5 bg-gradient-to-r from-primary/20 via-primary/60 to-primary/20" />
           
