@@ -1,38 +1,51 @@
 import { Button } from "@/components/ui/button";
+import heroBackground from "@/assets/hero-background.png";
 
 const Hero = () => {
   return (
-    <section className="container mx-auto px-4 py-12 md:py-20 max-w-7xl">
-      <div className="max-w-4xl mx-auto text-center">
-        <div className="animate-fade-in space-y-6">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-black leading-[1.06] tracking-tight">
-            Estrutura profissional no{" "}
-            <span className="text-primary">Criminal</span> para captar com urgência e previsibilidade
-          </h1>
-          
-          <p className="text-lg md:text-xl text-muted-foreground mx-auto max-w-3xl">
-            Receba uma estrutura completa de marketing jurídico pronta para gerar novos clientes em até 7 dias
-          </p>
+    <section className="relative min-h-[600px] md:min-h-[700px] flex items-center overflow-hidden">
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center"
+        style={{ backgroundImage: `url(${heroBackground})` }}
+      >
+        {/* Red Overlay - more subtle */}
+        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/60 to-background/40" />
+      </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
-            <Button 
-              variant="hero" 
-              size="lg"
-              className="w-full sm:w-auto"
-              asChild
-            >
-              <a href="#condicao">Quero essa estrutura</a>
-            </Button>
-            <Button 
-              variant="outline" 
-              size="lg"
-              className="w-full sm:w-auto"
-              asChild
-            >
-              <a href="https://wa.me/48999379752?text=Quero+avancar+com+a+estrutura+digital" target="_blank" rel="noopener noreferrer">
-                Falar no WhatsApp
-              </a>
-            </Button>
+      {/* Content */}
+      <div className="container mx-auto px-4 py-12 md:py-20 relative z-10">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="animate-fade-in space-y-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black leading-[1.06] tracking-tight">
+              Estrutura profissional no{" "}
+              <span className="text-primary">Criminal</span> para captar com urgência e previsibilidade
+            </h1>
+            
+            <p className="text-lg md:text-xl text-muted-foreground mx-auto max-w-3xl">
+              Receba uma estrutura completa de marketing jurídico pronta para gerar novos clientes em até 7 dias
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
+              <Button 
+                variant="hero" 
+                size="lg"
+                className="w-full sm:w-auto"
+                asChild
+              >
+                <a href="#condicao">Quero essa estrutura</a>
+              </Button>
+              <Button 
+                variant="outline" 
+                size="lg"
+                className="w-full sm:w-auto"
+                asChild
+              >
+                <a href="https://wa.me/48999379752?text=Quero+avancar+com+a+estrutura+digital" target="_blank" rel="noopener noreferrer">
+                  Falar no WhatsApp
+                </a>
+              </Button>
+            </div>
           </div>
         </div>
       </div>
