@@ -4,7 +4,8 @@ import heroBg from "@/assets/background-lp-criminal.png"; // <── coloque a i
 const Hero = () => {
   return (
     <section
-      className="relative min-h-[600px] md:min-h-[700px] flex items-center overflow-hidden bg-cover bg-no-repeat bg-right"
+      className="relative min-h-[600px] md:min-h-[700px] flex items-center justify-center md:justify-start
+ overflow-hidden bg-cover bg-no-repeat bg-right"
       style={{
         backgroundImage: `url(${heroBg})`,
       }}
