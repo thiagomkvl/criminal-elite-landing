@@ -51,7 +51,7 @@ const Hero = () => {
             "
           >
             <span className="whitespace-nowrap">Estrutura profissional</span>{" "}
-            no <span className="text-red-500">Criminal</span> para captar com
+            no <span className="text-red-500">Direito Criminal</span> para captar com
             urgência e previsibilidade
           </motion.h1>
 
