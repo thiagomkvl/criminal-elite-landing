@@ -11,7 +11,7 @@ const HowItWorks = () => {
     {
       icon: Target,
       number: "02",
-      title: "Ajuste posicionamento digital do escritório",
+      title: "Ajuste posicionamento digital",
       description: "Definimos como seu escritório será percebido online para atrair os casos certos"
     },
     {
