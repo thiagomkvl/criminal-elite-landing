@@ -1,10 +1,12 @@
+"use client";
+import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import heroBg from "@/assets/background-lp-criminal.png";
 
 const Hero = () => {
   return (
     <section className="relative overflow-hidden bg-[#0b0606] min-h-[90vh] md:min-h-[100vh] flex items-center">
-      {/* BACKGROUND com bleed anti-borda */}
+      {/* BACKGROUND */}
       <div className="absolute -inset-[2px] pointer-events-none">
         <img
           src={heroBg}
@@ -25,7 +27,10 @@ const Hero = () => {
 
       {/* CONTEÚDO */}
       <div className="relative z-10 w-full h-full grid">
-        <div
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
           className="
             self-center
             w-full max-w-[780px]
@@ -34,7 +39,10 @@ const Hero = () => {
             text-left text-white space-y-5
           "
         >
-          <h1
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2, duration: 0.8, ease: "easeOut" }}
             className="
               text-[1.85rem] leading-[1.12]
               sm:text-[2.2rem] sm:leading-[1.12]
@@ -45,14 +53,24 @@ const Hero = () => {
             <span className="whitespace-nowrap">Estrutura profissional</span>{" "}
             no <span className="text-red-500">Criminal</span> para captar com
             urgência e previsibilidade
-          </h1>
+          </motion.h1>
 
-          <p className="text-[0.97rem] sm:text-base md:text-lg text-white/85 max-w-[92%]">
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.35, duration: 0.8, ease: "easeOut" }}
+            className="text-[0.97rem] sm:text-base md:text-lg text-white/85 max-w-[92%]"
+          >
             Receba uma estrutura completa de marketing jurídico pronta para gerar
             novos clientes em até 7 dias
-          </p>
+          </motion.p>
 
-          <div className="pt-2 flex flex-col sm:flex-row gap-3 sm:gap-4">
+          <motion.div
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5, duration: 0.8, ease: "easeOut" }}
+            className="pt-2 flex flex-col sm:flex-row gap-3 sm:gap-4"
+          >
             <Button variant="hero" size="lg" className="w-full sm:w-auto" asChild>
               <a href="#condicao">Quero essa estrutura</a>
             </Button>
@@ -70,8 +88,8 @@ const Hero = () => {
                 Falar no WhatsApp
               </a>
             </Button>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   );
