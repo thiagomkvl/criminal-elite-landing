@@ -4,29 +4,27 @@ import heroBg from "@/assets/background-lp-criminal.png";
 const Hero = () => {
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-[#0b0606] via-[#0b0606] to-[#100909]">
+      {/* altura da dobra */}
       <div className="h-[80vh] md:h-[92vh] min-h-[640px] relative">
 
-        {/* IMAGEM — reposicionada mais ao centro e com escala equilibrada */}
+        {/* IMAGEM: inteira, mais distante, ancorada à direita */}
         <img
           src={heroBg}
           alt="Criminal Elite"
           className="
             pointer-events-none select-none
-            absolute inset-y-0 right-0
-            h-full w-full md:w-auto
-            object-cover md:object-contain
-            object-[75%_center]  /* empurra um pouco pro centro */
-            md:translate-x-[2%]
-            scale-[0.88] md:scale-[0.82]
-            transition-all duration-500 ease-out
+            absolute right-0 inset-y-0
+            h-full w-auto object-contain
+            md:translate-x-6        /* leve afastamento */
+            scale-[0.9] md:scale-[0.84] /* deixa mais distante/menor */
           "
           loading="eager"
         />
 
-        {/* GRADIENTE PRETO para o texto */}
+        {/* GRADIENTE PRETO à esquerda para texto */}
         <div className="absolute inset-y-0 left-0 w-1/2 md:w-[56%] bg-gradient-to-r from-black via-black/70 to-transparent z-10" />
 
-        {/* Vignette sutil */}
+        {/* Vignette sutil para integrar */}
         <div className="absolute inset-0 bg-[radial-gradient(1200px_600px_at_20%_40%,rgba(220,38,38,0.08),transparent)] z-10" />
 
         {/* CONTEÚDO */}
