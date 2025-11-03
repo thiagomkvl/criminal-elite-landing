@@ -4,7 +4,7 @@ import heroBg from "@/assets/background-lp-criminal.png";
 const Hero = () => {
   return (
     <section className="relative overflow-hidden bg-[#0b0606] min-h-[90vh] md:min-h-[100vh] flex items-center">
-      {/* BACKGROUND (com bleed anti-borda) */}
+      {/* BACKGROUND */}
       <div className="absolute -inset-[2px] pointer-events-none">
         <img
           src={heroBg}
@@ -29,8 +29,13 @@ const Hero = () => {
       <div className="absolute inset-x-0 bottom-0 h-[34%] bg-gradient-to-t from-black/85 via-black/50 to-transparent md:hidden pointer-events-none" />
 
       {/* CONTEÚDO */}
-      <div className="relative z-10 container mx-auto px-5 sm:px-6 md:px-10 h-full grid place-items-center">
-        <div className="max-w-[680px] sm:max-w-2xl md:max-w-3xl lg:max-w-4xl text-left text-white space-y-5">
+      <div className="relative z-10 container mx-auto h-full grid place-items-center">
+        <div className="
+          max-w-[680px] sm:max-w-2xl md:max-w-3xl lg:max-w-4xl
+          text-left text-white space-y-5
+          w-full px-5 sm:px-6 md:px-10
+          md:ml-[2vw] lg:ml-[4vw] xl:ml-[6vw]
+        ">
           <h1 className="text-[1.85rem] leading-[1.12] sm:text-[2.2rem] sm:leading-[1.12] md:text-5xl md:leading-[1.1] lg:text-6xl font-extrabold tracking-tight">
             Estrutura profissional no{" "}
             <span className="text-red-500">Criminal</span> para captar com
