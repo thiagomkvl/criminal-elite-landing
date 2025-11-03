@@ -42,8 +42,8 @@ const Hero = () => {
               lg:text-6xl font-extrabold tracking-tight
             "
           >
-            <span className="whitespace-nowrap">Estrutura profissional</span>{" "}
-            no <span className="text-red-500">Criminal</span> para captar com
+            <span className="whitespace-nowrap">Estrutura para</span>{" "}
+            Advogado <span className="text-red-500">Criminal</span> para captar com
             urgência e previsibilidade
           </h1>
 
