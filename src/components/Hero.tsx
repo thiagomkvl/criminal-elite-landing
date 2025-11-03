@@ -50,8 +50,8 @@ const Hero = () => {
               lg:text-6xl font-extrabold tracking-tight
             "
           >
-            <span className="whitespace-nowrap">Estrutura profissional</span>{" "}
-            no Direito <span className="text-red-500">Criminal</span> para captar com
+            <span className="whitespace-nowrap">Estrutura Direito</span>{" "}
+            <span className="text-red-500">Criminal</span> para captar com
             urgência e previsibilidade
           </motion.h1>
 
