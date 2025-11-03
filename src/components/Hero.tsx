@@ -1,49 +1,54 @@
 import { Button } from "@/components/ui/button";
-import heroBg from "@/assets/background-lp-criminal.png"; // sua imagem
+import heroBg from "@/assets/background-lp-criminal.png";
 
 const Hero = () => {
   return (
-    <section className="relative overflow-hidden bg-[#0b0606]">
-      {/* altura da dobra */}
-      <div className="relative h-[78vh] md:h-[92vh] min-h-[640px]">
+    <section className="relative overflow-hidden bg-gradient-to-br from-[#0b0606] via-[#0b0606] to-[#100909]">
+      <div className="h-[80vh] md:h-[92vh] min-h-[640px] relative">
 
-        {/* GRADIENTE PRETO p/ texto (esquerda → centro) */}
-        <div className="absolute inset-0 z-10 pointer-events-none">
-          <div className="absolute inset-y-0 left-0 w-[60%] md:w-[58%] bg-gradient-to-r from-black via-black/80 to-transparent" />
-          <div className="absolute inset-0 bg-[radial-gradient(1000px_520px_at_18%_38%,rgba(220,38,38,0.08),transparent)]" />
-        </div>
+        {/* IMAGEM — reposicionada mais ao centro e com escala equilibrada */}
+        <img
+          src={heroBg}
+          alt="Criminal Elite"
+          className="
+            pointer-events-none select-none
+            absolute inset-y-0 right-0
+            h-full w-full md:w-auto
+            object-cover md:object-contain
+            object-[75%_center]  /* empurra um pouco pro centro */
+            md:translate-x-[2%]
+            scale-[0.88] md:scale-[0.82]
+            transition-all duration-500 ease-out
+          "
+          loading="eager"
+        />
 
-        {/* IMAGEM: ocupa a altura inteira, ancorada à direita */}
-        <div className="absolute inset-0">
-          <img
-            src={heroBg}
-            alt="Criminal Elite"
-            className="
-              absolute right-[-4%] top-1/2 -translate-y-1/2
-              h-[115%] md:h-full w-auto max-w-none
-              object-contain md:object-contain
-              select-none pointer-events-none
-            "
-            loading="eager"
-          />
-        </div>
+        {/* GRADIENTE PRETO para o texto */}
+        <div className="absolute inset-y-0 left-0 w-1/2 md:w-[56%] bg-gradient-to-r from-black via-black/70 to-transparent z-10" />
 
-        {/* CONTEÚDO (coluna esquerda, texto normal, alinhado à esquerda) */}
+        {/* Vignette sutil */}
+        <div className="absolute inset-0 bg-[radial-gradient(1200px_600px_at_20%_40%,rgba(220,38,38,0.08),transparent)] z-10" />
+
+        {/* CONTEÚDO */}
         <div className="relative z-20 h-full container mx-auto px-4">
-          <div className="h-full grid grid-cols-1 md:grid-cols-12">
-            <div className="flex flex-col justify-center md:col-span-7 text-white">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-black leading-[1.06] tracking-tight">
-                Estrutura profissional no <span className="text-red-500">Criminal</span> para captar com urgência e previsibilidade
+          <div className="h-full flex flex-col items-center justify-center text-center text-white">
+            <div className="max-w-[980px] space-y-6">
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-black leading-[1.05] tracking-tight">
+                Estrutura profissional no{" "}
+                <span className="text-red-500">Criminal</span> para captar com
+                urgência e previsibilidade
               </h1>
 
-              <p className="mt-5 text-base md:text-lg text-white/80 max-w-[44rem]">
-                Receba uma estrutura completa de marketing jurídico pronta para gerar novos clientes em até 7 dias
+              <p className="text-base md:text-xl text-white/80 max-w-3xl mx-auto">
+                Receba uma estrutura completa de marketing jurídico pronta para gerar
+                novos clientes em até 7 dias
               </p>
 
-              <div className="mt-8 flex flex-col sm:flex-row gap-4">
+              <div className="pt-4 flex flex-col sm:flex-row gap-4 justify-center">
                 <Button variant="hero" size="lg" className="w-full sm:w-auto" asChild>
                   <a href="#condicao">Quero essa estrutura</a>
                 </Button>
+
                 <Button
                   variant="outline"
                   size="lg"
@@ -60,11 +65,9 @@ const Hero = () => {
                 </Button>
               </div>
             </div>
-
-            {/* coluna fantasma p/ reservar espaço da imagem em desktop */}
-            <div className="hidden md:block md:col-span-5" />
           </div>
         </div>
+
       </div>
     </section>
   );
