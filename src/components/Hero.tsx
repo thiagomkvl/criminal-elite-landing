@@ -4,14 +4,15 @@ import heroBg from "@/assets/background-lp-criminal.png";
 const Hero = () => {
   return (
     <section className="relative overflow-hidden bg-[#0b0606] min-h-[90vh] md:min-h-[100vh] flex items-center">
-      {/* BACKGROUND com bleed anti-borda */}
+      {/* BACKGROUND (inalterado no desktop) */}
       <div className="absolute -inset-[2px] pointer-events-none">
         <img
           src={heroBg}
           alt="Criminal Elite"
           className="
             w-full h-full object-cover
-            object-center sm:object-[60%_center] md:object-[70%_center] lg:object-[72%_center]
+            /* MOBILE: mostra mais o rosto; DESKTOP: mantém o enquadramento aprovado */
+            object-[60%_center] sm:object-[62%_center] md:object-[70%_center] lg:object-[72%_center]
             opacity-95 [backface-visibility:hidden] [transform:translateZ(0)]
           "
           loading="eager"
@@ -19,11 +20,21 @@ const Hero = () => {
       </div>
 
       {/* OVERLAYS */}
+      {/* 1) Gradiente lateral (mantém legibilidade e NÃO muda no desktop) */}
       <div className="absolute inset-y-0 left-0 w-[85%] xs:w-[78%] sm:w-[66%] md:w-[60%] lg:w-[58%] bg-gradient-to-r from-black via-black/85 to-transparent pointer-events-none" />
-      <div className="absolute inset-0 bg-[radial-gradient(900px_600px_at_22%_40%,rgba(220,38,38,0.08),transparent)] pointer-events-none" />
-      <div className="absolute inset-x-0 bottom-0 h-[34%] bg-gradient-to-t from-black/85 via-black/50 to-transparent md:hidden pointer-events-none" />
 
-      {/* CONTEÚDO */}
+      <div className="absolute inset-0 bg-[radial-gradient(900px_600px_at_22%_40%,rgba(220,38,38,0.08),transparent)] pointer-events-none" />
+
+      {/* 2) MOBILE-ONLY: sombra geral pra ler melhor sobre a foto */}
+      <div className="absolute inset-0 bg-black/55 md:hidden pointer-events-none" />
+      {/* ↑ ajuste a força da sombra trocando /55 para /50, /60, etc. */}
+
+      {/* (opcional) Se quiser, pode remover este gradiente de rodapé mobile para não somar escurecimento:
+          Apague a linha abaixo se achar que ficou escuro demais.
+      */}
+      {/* <div className="absolute inset-x-0 bottom-0 h-[34%] bg-gradient-to-t from-black/85 via-black/50 to-transparent md:hidden pointer-events-none" /> */}
+
+      {/* CONTEÚDO (inalterado) */}
       <div className="relative z-10 w-full h-full grid">
         <div
           className="
@@ -42,9 +53,11 @@ const Hero = () => {
               lg:text-6xl font-extrabold tracking-tight
             "
           >
-            <span className="whitespace-nowrap">Estrutura para</span>{" "}
-            Advogado <span className="text-red-500">Criminal</span> captar com
-            urgência e previsibilidade
+            Estrutura para{" "}
+            <span className="text-red-500 whitespace-nowrap">
+              Advogado Criminal
+            </span>{" "}
+            captar com urgência e previsibilidade
           </h1>
 
           <p className="text-[0.97rem] sm:text-base md:text-lg text-white/85 max-w-[92%]">
