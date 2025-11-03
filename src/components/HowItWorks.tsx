@@ -43,6 +43,7 @@ const HowItWorks = () => {
   return (
     <section className="container mx-auto px-4 py-16 md:py-24 max-w-7xl">
       <div className="space-y-12">
+        {/* Cabeçalho */}
         <div className="text-center space-y-3 max-w-3xl mx-auto">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-black tracking-tight">
             Como funciona
@@ -52,32 +53,37 @@ const HowItWorks = () => {
           </p>
         </div>
 
+        {/* Etapas */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 relative">
-          {/* Connection lines for desktop - first row */}
-          <div className="hidden lg:block absolute top-12 left-[16.666%] right-[16.666%] h-0.5 bg-gradient-to-r from-primary/20 via-primary/60 to-primary/20" />
-          {/* Connection lines for desktop - second row */}
-          <div className="hidden lg:block absolute top-[calc(100%-3rem)] left-[16.666%] right-[16.666%] h-0.5 bg-gradient-to-r from-primary/20 via-primary/60 to-primary/20" />
-          {/* Vertical connection between rows */}
-          <div className="hidden lg:block absolute top-12 bottom-12 right-[16.666%] w-0.5 bg-gradient-to-b from-primary/60 via-primary/60 to-primary/60" />
+          {/* 🔥 Linhas removidas */}
           
           {steps.map((step, index) => {
             const Icon = step.icon;
             return (
               <div 
                 key={index}
-                className="relative flex flex-col items-center text-center space-y-4"
+                className="relative flex flex-col items-center text-center space-y-4 transition-transform duration-300 hover:-translate-y-1"
               >
-                {/* Step icon with number */}
+                {/* Ícone e número */}
                 <div className="relative">
-                  <div className="w-24 h-24 rounded-2xl bg-gradient-to-br from-primary/20 to-primary/5 border-2 border-primary/30 flex items-center justify-center shadow-glow">
-                    <Icon className="w-10 h-10 text-primary" />
+                  <div className="
+                    w-24 h-24 rounded-2xl 
+                    bg-gradient-to-br from-primary/20 to-primary/5 
+                    border-2 border-primary/30 
+                    flex items-center justify-center 
+                    shadow-[0_0_10px_rgba(255,0,0,0.15)]
+                    transition-all duration-500 
+                    hover:shadow-[0_0_25px_rgba(255,0,0,0.4)]
+                    hover:scale-105
+                  ">
+                    <Icon className="w-10 h-10 text-primary transition-colors duration-300 hover:text-red-500" />
                   </div>
                   <div className="absolute -top-2 -right-2 w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-sm font-black shadow-md">
                     {step.number}
                   </div>
                 </div>
 
-                {/* Content */}
+                {/* Conteúdo */}
                 <div className="space-y-2">
                   <h3 className="text-xl font-bold text-foreground">
                     {step.title}
