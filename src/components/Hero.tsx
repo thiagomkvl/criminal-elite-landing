@@ -43,7 +43,7 @@ const Hero = () => {
             "
           >
             <span className="whitespace-nowrap">Estrutura para</span>{" "}
-            Advogado <span className="text-red-500">Criminal</span> para captar com
+            Advogado <span className="text-red-500">Criminal</span> captar com
             urgência e previsibilidade
           </h1>
 
