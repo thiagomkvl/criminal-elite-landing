@@ -4,37 +4,35 @@ import heroBg from "@/assets/background-lp-criminal.png";
 const Hero = () => {
   return (
     <section className="relative overflow-hidden bg-[#0b0606] min-h-[90vh] md:min-h-[100vh] flex items-center">
-      {/* BACKGROUND (inalterado no desktop) */}
+      {/* BACKGROUND */}
       <div className="absolute -inset-[2px] pointer-events-none">
         <img
           src={heroBg}
           alt="Criminal Elite"
-          className="
+          className={`
             w-full h-full object-cover
-            /* MOBILE: mostra mais o rosto; DESKTOP: mantém o enquadramento aprovado */
-            object-[60%_center] sm:object-[62%_center] md:object-[70%_center] lg:object-[72%_center]
+            /* MOBILE: traz o rosto para a área do texto */
+            object-[68%_38%]
+            /* DESKTOP (mantido exatamente como aprovado) */
+            md:object-[70%_center] lg:object-[72%_center]
             opacity-95 [backface-visibility:hidden] [transform:translateZ(0)]
-          "
+          `}
           loading="eager"
         />
       </div>
 
       {/* OVERLAYS */}
-      {/* 1) Gradiente lateral (mantém legibilidade e NÃO muda no desktop) */}
+      {/* Gradiente lateral (mantém legibilidade e NÃO muda no desktop) */}
       <div className="absolute inset-y-0 left-0 w-[85%] xs:w-[78%] sm:w-[66%] md:w-[60%] lg:w-[58%] bg-gradient-to-r from-black via-black/85 to-transparent pointer-events-none" />
 
+      {/* Radial discreto (mantido) */}
       <div className="absolute inset-0 bg-[radial-gradient(900px_600px_at_22%_40%,rgba(220,38,38,0.08),transparent)] pointer-events-none" />
 
-      {/* 2) MOBILE-ONLY: sombra geral pra ler melhor sobre a foto */}
-      <div className="absolute inset-0 bg-black/55 md:hidden pointer-events-none" />
-      {/* ↑ ajuste a força da sombra trocando /55 para /50, /60, etc. */}
+      {/* MOBILE-ONLY: sombra global para leitura sobre a foto */}
+      <div className="absolute inset-0 bg-black/48 md:hidden pointer-events-none" />
+      {/* se quiser mais/menos sombra: troque /48 por /40, /55 etc. */}
 
-      {/* (opcional) Se quiser, pode remover este gradiente de rodapé mobile para não somar escurecimento:
-          Apague a linha abaixo se achar que ficou escuro demais.
-      */}
-      {/* <div className="absolute inset-x-0 bottom-0 h-[34%] bg-gradient-to-t from-black/85 via-black/50 to-transparent md:hidden pointer-events-none" /> */}
-
-      {/* CONTEÚDO (inalterado) */}
+      {/* CONTEÚDO */}
       <div className="relative z-10 w-full h-full grid">
         <div
           className="
@@ -45,24 +43,35 @@ const Hero = () => {
             text-left text-white space-y-5
           "
         >
+          {/* TÍTULO com quebras controladas APENAS no mobile */}
           <h1
             className="
               text-[1.85rem] leading-[1.12]
               sm:text-[2.2rem] sm:leading-[1.12]
               md:text-5xl md:leading-[1.1]
               lg:text-6xl font-extrabold tracking-tight
+              max-w-[26rem] sm:max-w-none
             "
           >
-            Estrutura para{" "}
-            <span className="text-red-500 whitespace-nowrap">
-              Advogado Criminal
-            </span>{" "}
-            captar com urgência e previsibilidade
+            {/* MOBILE (força linhas boas) */}
+            <span className="sm:hidden">
+              Estrutura para <span className="text-red-500 whitespace-nowrap">Advogado Criminal</span>
+              <br />
+              captar com urgência e
+              <br />
+              previsibilidade
+            </span>
+
+            {/* DESKTOP (mantém exatamente como estava) */}
+            <span className="hidden sm:inline">
+              Estrutura para{" "}
+              <span className="text-red-500 whitespace-nowrap">Advogado Criminal</span>{" "}
+              captar com urgência e previsibilidade
+            </span>
           </h1>
 
           <p className="text-[0.97rem] sm:text-base md:text-lg text-white/85 max-w-[92%]">
-            Receba uma estrutura completa de marketing jurídico pronta para gerar
-            novos clientes em até 7 dias
+            Receba uma estrutura completa de marketing jurídico pronta para gerar novos clientes em até 7 dias
           </p>
 
           <div className="pt-2 flex flex-col sm:flex-row gap-3 sm:gap-4">
