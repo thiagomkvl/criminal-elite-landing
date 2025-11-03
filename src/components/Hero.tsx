@@ -5,26 +5,32 @@ const Hero = () => {
   return (
     <section className="relative flex items-center min-h-[85vh] overflow-hidden bg-[#0b0606]">
       {/* BACKGROUND IMAGE */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 flex justify-end">
         <img
           src={heroBg}
           alt="Criminal Elite"
           className="
-            w-full h-full object-cover md:object-contain
-            object-right md:object-[85%_center]
-            scale-[1.05] md:scale-[0.9]
-            opacity-90
+            h-full w-auto
+            max-w-none
+            object-contain
+            object-center
+            scale-[0.92]
+            translate-x-[6%]
+            md:translate-x-[8%]
+            lg:translate-x-[10%]
+            opacity-95
+            transition-all duration-500 ease-out
           "
         />
-        {/* GRADIENT LEFT OVERLAY */}
-        <div className="absolute inset-y-0 left-0 w-[55%] bg-gradient-to-r from-black via-black/80 to-transparent" />
-        {/* Red vignette accent */}
-        <div className="absolute inset-0 bg-[radial-gradient(1000px_600px_at_25%_40%,rgba(220,38,38,0.07),transparent)]" />
+        {/* Gradiente escuro no lado esquerdo */}
+        <div className="absolute inset-y-0 left-0 w-[58%] bg-gradient-to-r from-black via-black/85 to-transparent" />
+        {/* Vinheta vermelha suave */}
+        <div className="absolute inset-0 bg-[radial-gradient(900px_600px_at_25%_40%,rgba(220,38,38,0.08),transparent)]" />
       </div>
 
-      {/* CONTENT */}
+      {/* CONTEÚDO */}
       <div className="relative z-10 container mx-auto px-6 md:px-10">
-        <div className="max-w-2xl md:max-w-3xl lg:max-w-4xl text-left text-white space-y-6">
+        <div className="max-w-3xl lg:max-w-4xl text-left text-white space-y-6">
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-[1.1] tracking-tight">
             Estrutura profissional no{" "}
             <span className="text-red-500">Criminal</span> para captar com
