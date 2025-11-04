@@ -1,91 +1,95 @@
-import { CheckCircle2, ArrowUpRight } from "lucide-react";
+import PortfolioCarousel from "@/components/PortfolioCarousel";
+import { CheckCircle2 } from "lucide-react";
 
-type Persona = { label: string; hint?: string };
-
-const personas: Persona[] = [
-  { label: "Advogados(as) iniciantes no criminal" },
-  { label: "Criminalistas buscando previsibilidade de agenda" },
-  { label: "Escritórios que querem medir leads, conversas e fechamentos" },
-  { label: "Profissionais que precisam de presença e autoridade digital" },
-  { label: "Quem quer escalar investimento com controle de demanda" },
+const portfolioItems = [
+  {
+    type: "image",
+    src: "/assets/portfolio/lp-hc-urgencia.webp",
+    tag: "LP",
+    title: "Landing Page – HC & Medidas de Urgência",
+    subtitle: "Estrutura de conversão com gatilhos de urgência e prova social.",
+    href: "https://criminal-elite-landing.vercel.app/",
+  },
+  {
+    type: "image",
+    src: "/assets/portfolio/criativo-flagrante.webp",
+    tag: "Criativo",
+    title: "Criativo – Flagrante & Custódia",
+    subtitle: "Anúncio com geolocalização e copy direta para plantões.",
+  },
+  {
+    type: "image",
+    src: "/assets/portfolio/whatsapp-script.webp",
+    tag: "WhatsApp",
+    title: "Roteiro de WhatsApp",
+    subtitle: "Sequência de mensagens para agendar consulta em minutos.",
+  },
+  {
+    type: "video",
+    src: "/assets/portfolio/resultado-curto.mp4",
+    poster: "/assets/portfolio/resultado-curto.webp",
+    tag: "Resultado",
+    title: "Agenda previsível",
+    subtitle: "Leads qualificados chegando todos os dias.",
+  },
 ];
 
-export default function WhoBenefits() {
+const Beneficios = () => {
   return (
-    <section className="container mx-auto px-4 py-14 md:py-20 max-w-7xl">
-      <div className="grid md:grid-cols-2 gap-10 lg:gap-14 items-center">
-        {/* LEFT — vídeo ou imagem */}
-        <figure className="relative">
-          <div className="relative w-full h-[420px] md:h-[480px] overflow-hidden rounded-2xl border border-border bg-card">
-            {/* Substitua o src abaixo pela tua thumbnail ou <video /> */}
-            <img
-              src="/assets/background-lp-criminal.png"
-              alt="Prévia rápida da estrutura em ação"
-              className="h-full w-full object-cover"
-            />
+    <section className="container mx-auto px-4 py-16 md:py-24 max-w-7xl">
+      <div className="grid lg:grid-cols-2 gap-10 items-start">
+        {/* ---- LADO ESQUERDO: PORTFÓLIO ---- */}
+        <div className="w-full">
+          <PortfolioCarousel
+            items={portfolioItems}
+            heightClass="h-[420px] md:h-[500px]" // altura generosa, ajustável
+          />
 
-            {/* Overlay suave + “play” opcional */}
-            <div className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-background/40 via-background/10 to-transparent" />
-            <button
-              className="group absolute left-4 top-4 inline-flex items-center gap-2 rounded-full border border-white/10 bg-black/30 px-3 py-1.5 text-xs text-white backdrop-blur transition hover:bg-black/50"
-              aria-label="Assistir vídeo de 60s"
-            >
-              <span className="inline-flex h-2.5 w-2.5 rounded-full bg-primary ring-4 ring-primary/20" />
-              Vídeo de 60s
-            </button>
+          <p className="text-sm text-muted-foreground mt-4 text-center md:text-left">
+            Um panorama do fluxo: anúncio → landing page → WhatsApp → fechamento.
+          </p>
+        </div>
 
-            {/* Botão central (somente se for abrir modal) */}
-            {/* <button className="absolute inset-0 m-auto h-16 w-16 rounded-full bg-white/10 backdrop-blur border border-white/20 text-white grid place-content-center hover:bg-white/15 transition">
-              ▶
-            </button> */}
-          </div>
-          <figcaption className="mt-3 text-xs text-muted-foreground">
-            Um panorama do fluxo: anúncio → LP → WhatsApp → fechamento.
-          </figcaption>
-        </figure>
-
-        {/* RIGHT — título, bullets e CTA */}
-        <div>
+        {/* ---- LADO DIREITO: BENEFÍCIOS ---- */}
+        <div className="space-y-6">
           <h2 className="text-3xl md:text-4xl font-black leading-tight">
             Quem vai se{" "}
-            <span className="relative inline-block">
-              <span className="bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
-                beneficiar
-              </span>
-              <span className="absolute -bottom-1 left-0 h-0.5 w-full bg-primary/60" />
+            <span className="text-primary underline decoration-primary/60 underline-offset-4">
+              beneficiar
             </span>{" "}
             desta estrutura
           </h2>
 
-          <ul className="mt-6 space-y-3">
-            {personas.map((p) => (
-              <li
-                key={p.label}
-                className="flex items-start gap-3 rounded-xl border border-border/60 bg-card/50 p-3 hover:border-primary/40 transition"
+          <div className="space-y-4">
+            {[
+              "Advogados(as) iniciantes no criminal",
+              "Criminalistas buscando previsibilidade de agenda",
+              "Escritórios que querem medir leads, conversas e fechamentos",
+              "Profissionais que precisam de presença e autoridade digital",
+              "Quem quer escalar investimento com controle de demanda",
+            ].map((benefit, index) => (
+              <div
+                key={index}
+                className="flex items-center gap-3 border border-border/40 rounded-xl px-4 py-3 hover:border-primary/40 transition-all"
               >
-                <span className="mt-1 inline-grid h-5 w-5 place-content-center rounded-full bg-primary/10 ring-4 ring-primary/10">
-                  <CheckCircle2 className="h-3.5 w-3.5 text-primary" />
-                </span>
-                <div className="text-sm leading-relaxed">
-                  <p className="text-foreground">{p.label}</p>
-                  {p.hint && (
-                    <p className="text-xs text-muted-foreground">{p.hint}</p>
-                  )}
-                </div>
-              </li>
+                <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0" />
+                <p className="text-sm md:text-base text-muted-foreground">
+                  {benefit}
+                </p>
+              </div>
             ))}
-          </ul>
+          </div>
 
-          {/* CTA em pílula */}
-          <div className="mt-8">
+          <div className="pt-6">
             <a
-              href="#condicao"
-              className="group inline-flex w-full items-center justify-center gap-2 rounded-full border border-primary/30 bg-gradient-to-r from-primary to-primary/70 px-6 py-4 text-base font-extrabold text-primary-foreground shadow-[0_0_60px_-20px] shadow-primary/50 hover:from-primary/90 hover:to-primary/70 md:w-auto"
+              href="https://wa.me/5548999999999" // atualiza com teu número
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-8 py-4 text-white font-semibold text-base md:text-lg hover:bg-primary/90 transition"
             >
-              Quero me inscrever
-              <ArrowUpRight className="h-5 w-5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+              Quero me inscrever →
             </a>
-            <p className="mt-3 text-xs text-muted-foreground">
+            <p className="text-xs text-muted-foreground mt-2">
               Sem mensalidades. Entrega personalizada em até 7 dias.
             </p>
           </div>
@@ -93,4 +97,6 @@ export default function WhoBenefits() {
       </div>
     </section>
   );
-}
+};
+
+export default Beneficios;
