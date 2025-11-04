@@ -1,120 +1,96 @@
-import { Calendar, TrendingUp, Award, BarChart3 } from "lucide-react";
+import { CheckCircle2, ArrowUpRight } from "lucide-react";
 
-const Results = () => {
-  const results = [
-    {
-      icon: Calendar,
-      title: "Agenda previsível",
-      description:
-        "Consultas qualificadas chegando de forma consistente, sem depender de indicações.",
-      chips: ["Leads regulares", "Menos sazonalidade"],
-    },
-    {
-      icon: TrendingUp,
-      title: "Crescimento mensurável",
-      description:
-        "Acompanhe métricas claras: leads, conversas e clientes fechados.",
-      chips: ["Funil rastreável", "Decisão por dados"],
-    },
-    {
-      icon: Award,
-      title: "Autoridade na área criminal",
-      description:
-        "Presença profissional nas redes sociais com conteúdo estratégico.",
-      chips: ["Posicionamento", "Prova social"],
-    },
-    {
-      icon: BarChart3,
-      title: "Escalabilidade controlada",
-      description:
-        "Ajuste investimento conforme sua capacidade de atendimento.",
-      chips: ["Custo sob controle", "Expansão segura"],
-    },
-  ];
+type Persona = { label: string; hint?: string };
 
+const personas: Persona[] = [
+  { label: "Advogados(as) iniciantes no criminal" },
+  { label: "Criminalistas buscando previsibilidade de agenda" },
+  { label: "Escritórios que querem medir leads, conversas e fechamentos" },
+  { label: "Profissionais que precisam de presença e autoridade digital" },
+  { label: "Quem quer escalar investimento com controle de demanda" },
+];
+
+export default function WhoBenefits() {
   return (
-    <section
-      className="container mx-auto px-4 py-12 md:py-16 max-w-7xl"
-      aria-labelledby="resultados-ttl"
-    >
-      <div className="space-y-10 md:space-y-12">
-        <div className="text-center space-y-3 max-w-3xl mx-auto">
-          <h2
-            id="resultados-ttl"
-            className="text-3xl md:text-4xl lg:text-5xl font-black tracking-tight"
-          >
-            Resultados esperados
+    <section className="container mx-auto px-4 py-14 md:py-20 max-w-7xl">
+      <div className="grid md:grid-cols-2 gap-10 lg:gap-14 items-center">
+        {/* LEFT — vídeo ou imagem */}
+        <figure className="relative">
+          <div className="relative aspect-video w-full overflow-hidden rounded-2xl border border-border bg-card">
+            {/* Substitua o src abaixo pela tua thumbnail ou <video /> */}
+            <img
+              src="/assets/benefits-thumb.jpg"
+              alt="Prévia rápida da estrutura em ação"
+              className="h-full w-full object-cover"
+            />
+
+            {/* Overlay suave + “play” opcional */}
+            <div className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-background/40 via-background/10 to-transparent" />
+            <button
+              className="group absolute left-4 top-4 inline-flex items-center gap-2 rounded-full border border-white/10 bg-black/30 px-3 py-1.5 text-xs text-white backdrop-blur transition hover:bg-black/50"
+              aria-label="Assistir vídeo de 60s"
+            >
+              <span className="inline-flex h-2.5 w-2.5 rounded-full bg-primary ring-4 ring-primary/20" />
+              Vídeo de 60s
+            </button>
+
+            {/* Botão central (somente se for abrir modal) */}
+            {/* <button className="absolute inset-0 m-auto h-16 w-16 rounded-full bg-white/10 backdrop-blur border border-white/20 text-white grid place-content-center hover:bg-white/15 transition">
+              ▶
+            </button> */}
+          </div>
+          <figcaption className="mt-3 text-xs text-muted-foreground">
+            Um panorama do fluxo: anúncio → LP → WhatsApp → fechamento.
+          </figcaption>
+        </figure>
+
+        {/* RIGHT — título, bullets e CTA */}
+        <div>
+          <h2 className="text-3xl md:text-4xl font-black leading-tight">
+            Quem vai se{" "}
+            <span className="relative inline-block">
+              <span className="bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
+                beneficiar
+              </span>
+              <span className="absolute -bottom-1 left-0 h-0.5 w-full bg-primary/60" />
+            </span>{" "}
+            desta estrutura
           </h2>
-          <p className="text-base md:text-lg text-muted-foreground">
-            O que muda quando sua estrutura digital profissional está rodando
-          </p>
-        </div>
 
-        <ul
-          role="list"
-          className="grid md:grid-cols-2 gap-6"
-          aria-label="Lista de resultados esperados"
-        >
-          {results.map((item, i) => {
-            const Icon = item.icon;
-            return (
+          <ul className="mt-6 space-y-3">
+            {personas.map((p) => (
               <li
-                role="listitem"
-                key={item.title}
-                className="group relative bg-gradient-card border border-border rounded-2xl p-7 md:p-8 overflow-hidden transition-all hover:border-primary/50 hover:shadow-md/20"
+                key={p.label}
+                className="flex items-start gap-3 rounded-xl border border-border/60 bg-card/50 p-3 hover:border-primary/40 transition"
               >
-                {/* Glow discreto */}
-                <div className="pointer-events-none absolute -top-10 -right-10 w-44 h-44 rounded-full bg-primary/5 blur-3xl group-hover:bg-primary/10 transition-colors" />
-
-                {/* Badge numerado */}
-                <div className="absolute -top-3 -left-3 h-9 px-3 rounded-full bg-primary text-primary-foreground text-xs font-black flex items-center gap-2 shadow/30">
-                  <span className="inline-block w-5 h-5 rounded-full bg-primary-foreground/10 border border-primary-foreground/20 flex items-center justify-center">
-                    {String(i + 1).padStart(2, "0")}
-                  </span>
-                  Resultado
+                <span className="mt-1 inline-grid h-5 w-5 place-content-center rounded-full bg-primary/10 ring-4 ring-primary/10">
+                  <CheckCircle2 className="h-3.5 w-3.5 text-primary" />
+                </span>
+                <div className="text-sm leading-relaxed">
+                  <p className="text-foreground">{p.label}</p>
+                  {p.hint && (
+                    <p className="text-xs text-muted-foreground">{p.hint}</p>
+                  )}
                 </div>
-
-                <div className="relative space-y-4">
-                  <div className="w-14 h-14 rounded-xl bg-primary/10 border border-primary/30 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                    <Icon aria-hidden className="w-7 h-7 text-primary" />
-                    <span className="sr-only">{item.title}</span>
-                  </div>
-
-                  <div className="space-y-2">
-                    <h3 className="text-xl font-bold leading-tight">
-                      {item.title}
-                    </h3>
-                    <p className="text-muted-foreground leading-relaxed">
-                      {item.description}
-                    </p>
-                  </div>
-
-                  {/* Chips de reforço */}
-                  <div className="flex flex-wrap gap-2 pt-2">
-                    {item.chips.map((chip) => (
-                      <span
-                        key={chip}
-                        className="text-xs md:text-[13px] rounded-full border border-primary/25 bg-primary/5 px-3 py-1 text-foreground/80"
-                      >
-                        {chip}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Área clicável maior no mobile (sem parecer botão) */}
-                <a
-                  href="#condicao"
-                  className="absolute inset-0 md:inset-auto md:pointer-events-none"
-                  aria-label={`Ver condições para alcançar: ${item.title}`}
-                />
               </li>
-            );
-          })}
-        </ul>
+            ))}
+          </ul>
+
+          {/* CTA em pílula */}
+          <div className="mt-8">
+            <a
+              href="#condicao"
+              className="group inline-flex w-full items-center justify-center gap-2 rounded-full border border-primary/30 bg-gradient-to-r from-primary to-primary/70 px-6 py-4 text-base font-extrabold text-primary-foreground shadow-[0_0_60px_-20px] shadow-primary/50 hover:from-primary/90 hover:to-primary/70 md:w-auto"
+            >
+              Quero me inscrever
+              <ArrowUpRight className="h-5 w-5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+            </a>
+            <p className="mt-3 text-xs text-muted-foreground">
+              Sem mensalidades. Entrega personalizada em até 7 dias.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
   );
-};
-
-export default Results;
+}
