@@ -19,7 +19,7 @@ export default function WhoBenefits() {
           <div className="relative aspect-video w-full overflow-hidden rounded-2xl border border-border bg-card">
             {/* Substitua o src abaixo pela tua thumbnail ou <video /> */}
             <img
-              src="/assets/benefits-thumb.jpg"
+              src="/assets/background-lp-criminal.png"
               alt="Prévia rápida da estrutura em ação"
               className="h-full w-full object-cover"
             />
