@@ -16,7 +16,7 @@ export default function WhoBenefits() {
       <div className="grid md:grid-cols-2 gap-10 lg:gap-14 items-center">
         {/* LEFT — vídeo ou imagem */}
         <figure className="relative">
-          <div className="relative aspect-video w-full overflow-hidden rounded-2xl border border-border bg-card">
+          <div className="relative w-full h-[420px] md:h-[480px] overflow-hidden rounded-2xl border border-border bg-card">
             {/* Substitua o src abaixo pela tua thumbnail ou <video /> */}
             <img
               src="/assets/background-lp-criminal.png"
