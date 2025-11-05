@@ -10,26 +10,26 @@ const portfolioItems = [
   {
     type: "image",
     src: carrosselHC,
-    tag: "LP",
-    title: "Landing Page – HC & Medidas de Urgência",
+    tag: "Bônus",
+    title: "Como aparecer para futuros clientes em momentos de urgência",
     subtitle:
-      "Estrutura de conversão com gatilhos de urgência e prova social.",
+      "Estratégia de presença digital para plantões e casos graves, construída para gerar autoridade e resposta imediata.",
     href: "https://criminal-elite-landing.vercel.app/",
   },
   {
     type: "image",
     src: carrosselPlantao,
-    tag: "Criativo",
-    title: "Criativo – Flagrante & Custódia",
-    subtitle: "Anúncio com geolocalização e copy direta para plantões.",
+    tag: "Bônus",
+    title: "Anúncios que falam com quem precisa de você agora",
+    subtitle: "Geolocalização e copy direta para plantões.",
   },
   {
     type: "image",
     src: carrosselwhatsapp,
-    tag: "WhatsApp",
-    title: "Roteiro de WhatsApp",
+    tag: "Bônus",
+    title: "Como transformar o WhatsApp em uma agenda previsível",
     subtitle:
-      "Sequência de mensagens para agendar consulta em minutos.",
+      "Acompanhamento semanal para manter um volume constante de clientes no escritório",
   },
 ];
 
