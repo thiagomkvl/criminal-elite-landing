@@ -13,7 +13,7 @@ export type PortfolioCarouselItem = ImageItem | VideoItem;
 
 type Props = {
   items: PortfolioCarouselItem[];
-  heightClass?: string;      // ex.: "h-[420px] md:h-[500px]"
+  heightClass?: string;       // ex.: "h-[420px] md:h-[500px]"
   className?: string;
   autoPlayMs?: number | null; // ex.: 6000 (null = desliga)
 };
@@ -35,14 +35,12 @@ const PortfolioCarousel: React.FC<Props> = ({
     [total]
   );
 
-  // autoplay (só no cliente)
   useEffect(() => {
     if (!autoPlayMs || !total) return;
     const id = setInterval(() => go(1), autoPlayMs);
     return () => clearInterval(id);
   }, [autoPlayMs, total, go]);
 
-  // fallback seguro (evita “sumiço” da seção)
   if (!total) {
     return (
       <div
@@ -88,12 +86,12 @@ const PortfolioCarousel: React.FC<Props> = ({
                 />
               )}
 
-              {/* Rodapé com sombreado + texto (contraste) */}
+              {/* Overlay: gradiente reforçado + conteúdo com respiro */}
               {(item.tag || item.title || item.subtitle) && (
-                <div className="absolute inset-x-0 bottom-0 p-4 sm:p-5">
-                  {/* Gradiente: mais forte no mobile, sutil no desktop */}
-                  <div className="absolute inset-x-0 bottom-0 h-[78%] sm:h-[65%] bg-gradient-to-t from-black/85 via-black/55 to-transparent rounded-b-2xl pointer-events-none" />
-                  <div className="relative z-10">
+                <div className="absolute inset-x-0 bottom-0 p-4 sm:p-5 pb-14 sm:pb-6">
+                  {/* Mobile mais forte / Desktop mais sutil */}
+                  <div className="absolute inset-x-0 bottom-0 h-[86%] sm:h-[65%] bg-gradient-to-t from-black/95 via-black/75 to-transparent rounded-b-2xl pointer-events-none" />
+                  <div className="relative z-10 max-w-[92%] sm:max-w-[80%]">
                     {item.tag && (
                       <span className="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold bg-red-600 text-white shadow">
                         {item.tag}
@@ -106,17 +104,17 @@ const PortfolioCarousel: React.FC<Props> = ({
                             href={item.href}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="block text-white text-lg sm:text-xl font-bold leading-tight hover:underline"
+                            className="block text-white text-[1.05rem] sm:text-xl font-bold leading-snug tracking-[-0.01em] drop-shadow-[0_1px_1.5px_rgba(0,0,0,0.9)]"
                           >
                             {item.title}
                           </a>
                         ) : (
-                          <h3 className="text-white text-lg sm:text-xl font-bold leading-tight">
+                          <h3 className="text-white text-[1.05rem] sm:text-xl font-bold leading-snug tracking-[-0.01em] drop-shadow-[0_1px_1.5px_rgba(0,0,0,0.9)]">
                             {item.title}
                           </h3>
                         )}
                         {item.subtitle && (
-                          <p className="text-white/90 text-sm sm:text-base">
+                          <p className="mt-1 text-white/90 text-[0.92rem] sm:text-base leading-relaxed drop-shadow-[0_1px_1.5px_rgba(0,0,0,0.75)]">
                             {item.subtitle}
                           </p>
                         )}
@@ -148,7 +146,7 @@ const PortfolioCarousel: React.FC<Props> = ({
         ›
       </button>
 
-      {/* Bullets */}
+      {/* Bullets — mantidos baixos; texto tem pb-14 para não encostar */}
       <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2">
         {items.map((_, i) => (
           <button
