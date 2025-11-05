@@ -33,16 +33,23 @@ const Hero = () => {
       </div>
 
       {/* OVERLAYS */}
-      {/* Gradiente lateral (inalterado) */}
-      <div className="absolute inset-y-0 left-0 w-[85%] xs:w-[78%] sm:w-[66%] md:w-[60%] lg:w-[58%] bg-gradient-to-r from-black via-black/85 to-transparent pointer-events-none" />
+      {/* Gradiente lateral — 50% mais leve no mobile, igual no desktop */}
+      <div
+        className="
+          absolute inset-y-0 left-0
+          w-[85%] xs:w-[78%] sm:w-[66%] md:w-[60%] lg:w-[58%]
+          bg-gradient-to-r
+          from-black/60 via-black/40 to-transparent        /* mobile/tablet: mais claro */
+          md:from-black md:via-black/85 md:to-transparent  /* desktop: original */
+          pointer-events-none
+        "
+      />
 
       {/* Radial discreto (mantido) */}
       <div className="absolute inset-0 bg-[radial-gradient(900px_600px_at_22%_40%,rgba(220,38,38,0.08),transparent)] pointer-events-none" />
 
-      {/* REMOVIDO: sombra mobile para leitura */}
-      {/*
+      {/* Sombra mobile (20% de opacidade) */}
       <div className="absolute inset-0 bg-black/20 md:hidden pointer-events-none" />
-      */}
 
       {/* CONTEÚDO */}
       <div className="relative z-10 w-full h-full grid">
@@ -66,7 +73,7 @@ const Hero = () => {
               max-w-[26rem] sm:max-w-none mx-auto sm:mx-0
             "
           >
-            {/* MOBILE: quebras controladas */}
+            {/* MOBILE */}
             <span className="sm:hidden">
               Estrutura para{" "}
               <span className="text-red-500 whitespace-nowrap">
@@ -78,7 +85,7 @@ const Hero = () => {
               previsibilidade
             </span>
 
-            {/* DESKTOP: sem alterações */}
+            {/* DESKTOP */}
             <span className="hidden sm:inline">
               Estrutura para{" "}
               <span className="text-red-500 whitespace-nowrap">
