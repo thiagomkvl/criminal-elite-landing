@@ -3,7 +3,7 @@ import { CheckCircle2 } from "lucide-react";
 
 // mesmo padrão do Hero
 import carrosselPlantao from "@/assets/carrosel-plantao.png";
-import carrosselHC from "@/assets/carrosel-hc.png";
+import carrosselHC from "@/assets/slide-hc.png";
 
 const portfolioItems = [
   {
