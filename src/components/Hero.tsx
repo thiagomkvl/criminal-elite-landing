@@ -50,7 +50,7 @@ const Hero = () => {
             w-full max-w-[780px]
             px-5 sm:px-6
             md:pl-[6vw] lg:pl-[8vw] xl:pl-[10vw] md:pr-0
-            text-left text-white space-y-5
+            text-center sm:text-left text-white space-y-5
             mt-[50vh] sm:mt-0
           "
         >
@@ -61,7 +61,7 @@ const Hero = () => {
               sm:text-[2.2rem] sm:leading-[1.12]
               md:text-5xl md:leading-[1.1]
               lg:text-6xl font-extrabold tracking-tight
-              max-w-[26rem] sm:max-w-none
+              max-w-[26rem] sm:max-w-none mx-auto sm:mx-0
             "
           >
             {/* MOBILE: quebras controladas */}
@@ -86,12 +86,12 @@ const Hero = () => {
             </span>
           </h1>
 
-          <p className="text-[0.97rem] sm:text-base md:text-lg text-white/85 max-w-[92%]">
+          <p className="text-[0.97rem] sm:text-base md:text-lg text-white/85 max-w-[92%] mx-auto sm:mx-0">
             Receba uma estrutura completa de marketing jurídico pronta para gerar
             novos clientes em até 7 dias
           </p>
 
-          <div className="pt-2 flex flex-col sm:flex-row gap-3 sm:gap-4">
+          <div className="pt-2 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center sm:justify-start">
             <Button variant="hero" size="lg" className="w-full sm:w-auto" asChild>
               <a href="#condicao">Quero essa estrutura</a>
             </Button>
