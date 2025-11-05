@@ -11,22 +11,14 @@ const Hero = () => {
         <img
           src={heroBgMobile}
           alt="Criminal Elite Mobile"
-          className={`
-            w-full h-full object-cover md:hidden
-            object-[50%_35%] opacity-95
-            [backface-visibility:hidden] [transform:translateZ(0)]
-          `}
+          className="w-full h-full object-cover md:hidden object-[50%_35%] opacity-95 [backface-visibility:hidden] [transform:translateZ(0)]"
           loading="eager"
         />
         {/* Desktop background */}
         <img
           src={heroBgDesktop}
           alt="Criminal Elite Desktop"
-          className={`
-            hidden md:block w-full h-full object-cover
-            md:object-[70%_center] lg:object-[72%_center]
-            opacity-95 [backface-visibility:hidden] [transform:translateZ(0)]
-          `}
+          className="hidden md:block w-full h-full object-cover md:object-[70%_center] lg:object-[72%_center] opacity-95 [backface-visibility:hidden] [transform:translateZ(0)]"
           loading="eager"
         />
       </div>
@@ -34,36 +26,43 @@ const Hero = () => {
       {/* OVERLAYS */}
       <div className="absolute inset-y-0 left-0 w-[85%] xs:w-[78%] sm:w-[66%] md:w-[60%] lg:w-[58%] bg-gradient-to-r from-black via-black/85 to-transparent pointer-events-none" />
       <div className="absolute inset-0 bg-[radial-gradient(900px_600px_at_22%_40%,rgba(220,38,38,0.08),transparent)] pointer-events-none" />
-      <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/55 to-transparent md:hidden pointer-events-none" />
+      {/* sombra extra no rodapé p/ leitura no mobile */}
+      <div className="absolute inset-0 md:hidden bg-gradient-to-t from-black/90 via-black/55 to-transparent pointer-events-none" />
 
       {/* CONTEÚDO */}
-      <div className="relative z-10 w-full h-full grid">
+      <div className="relative z-10 w-full h-full">
+        {/* 
+          MOBILE: bloco absoluto ancorado no rodapé
+          DESKTOP: volta a ser estático e centralizado como antes
+        */}
         <div
-          className={`
-            w-full max-w-[780px]
+          className="
+            absolute inset-x-0 bottom-[6vh] 
             px-5 sm:px-6
+            text-center 
+            md:static md:text-left
             md:pl-[6vw] lg:pl-[8vw] xl:pl-[10vw] md:pr-0
-            text-white space-y-5
-            /* MOBILE: reposicionado mais para baixo */
-            self-end md:self-center
-            text-center md:text-left
+            w-full max-w-[780px] md:max-w-none
             mx-auto md:mx-0
-            pb-[10vh] sm:pb-[12vh] md:pb-0
-            translate-y-[3vh] md:translate-y-0
-          `}
+            text-white space-y-5
+          "
+          style={{
+            // respeita área segura em iOS sem roubar espaço no desktop
+            paddingBottom: "max(env(safe-area-inset-bottom, 0px), 16px)",
+          }}
         >
           {/* TÍTULO */}
           <h1
-            className={`
+            className="
               text-[2rem] leading-[1.14]
               sm:text-[2.2rem] sm:leading-[1.12]
               md:text-5xl md:leading-[1.1]
-              lg:text-6xl
-              font-extrabold tracking-tight
+              lg:text-6xl font-extrabold tracking-tight
               max-w-[26rem] sm:max-w-[38rem] md:max-w-none
               mx-auto md:mx-0
-            `}
+            "
           >
+            {/* MOBILE */}
             <span className="sm:hidden">
               Estrutura para{" "}
               <span className="text-red-500 whitespace-nowrap">
@@ -74,7 +73,7 @@ const Hero = () => {
               <br />
               previsibilidade
             </span>
-
+            {/* DESKTOP */}
             <span className="hidden sm:inline">
               Estrutura para{" "}
               <span className="text-red-500 whitespace-nowrap">
@@ -92,15 +91,9 @@ const Hero = () => {
 
           {/* BOTÕES */}
           <div className="pt-4 flex flex-col sm:flex-row gap-3 sm:gap-4 max-w-[28rem] sm:max-w-none mx-auto md:mx-0 w-full">
-            <Button
-              variant="hero"
-              size="lg"
-              className="w-full sm:w-auto py-4 text-[0.95rem]"
-              asChild
-            >
+            <Button variant="hero" size="lg" className="w-full sm:w-auto py-4 text-[0.95rem]" asChild>
               <a href="#condicao">Quero essa estrutura</a>
             </Button>
-
             <Button
               variant="outline"
               size="lg"
