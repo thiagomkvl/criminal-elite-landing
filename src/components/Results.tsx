@@ -11,9 +11,9 @@ const portfolioItems = [
     type: "image",
     src: carrosselHC,
     tag: "Bônus",
-    title: "Como aparecer para futuros clientes em momentos de urgência",
+    title: "Apareça para futuros clientes em momentos de urgência",
     subtitle:
-      "Estratégia de presença digital para plantões e casos graves, construída para gerar autoridade e resposta imediata.",
+      "Estratégia de presença digital construída para gerar autoridade e resposta imediata.",
     href: "https://criminal-elite-landing.vercel.app/",
   },
   {
@@ -21,13 +21,13 @@ const portfolioItems = [
     src: carrosselPlantao,
     tag: "Bônus",
     title: "Anúncios que falam com quem precisa de você agora",
-    subtitle: "Geolocalização e copy direta para plantões.",
+    subtitle: "Geolocalização direta para plantões.",
   },
   {
     type: "image",
     src: carrosselwhatsapp,
     tag: "Bônus",
-    title: "Como transformar o WhatsApp em uma agenda previsível",
+    title: "Transforme seu WhatsApp em uma agenda previsível",
     subtitle:
       "Acompanhamento semanal para manter um volume constante de clientes no escritório",
   },
