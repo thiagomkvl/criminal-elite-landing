@@ -41,7 +41,7 @@ const Hero = () => {
 
       {/* REMOVIDO: sombra mobile para leitura */}
       {/*
-      <div className="absolute inset-0 bg-black/45 md:hidden pointer-events-none" />
+      <div className="absolute inset-0 bg-black/20 md:hidden pointer-events-none" />
       */}
 
       {/* CONTEÚDO */}
