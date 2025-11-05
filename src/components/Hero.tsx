@@ -39,8 +39,10 @@ const Hero = () => {
       {/* Radial discreto (mantido) */}
       <div className="absolute inset-0 bg-[radial-gradient(900px_600px_at_22%_40%,rgba(220,38,38,0.08),transparent)] pointer-events-none" />
 
-      {/* MOBILE: sombra suave para leitura */}
+      {/* REMOVIDO: sombra mobile para leitura */}
+      {/*
       <div className="absolute inset-0 bg-black/45 md:hidden pointer-events-none" />
+      */}
 
       {/* CONTEÚDO */}
       <div className="relative z-10 w-full h-full grid">
