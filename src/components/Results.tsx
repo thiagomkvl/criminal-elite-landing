@@ -2,12 +2,12 @@ import PortfolioCarousel from "@/components/PortfolioCarousel";
 import { CheckCircle2 } from "lucide-react";
 
 // mesmo padrão do Hero
-import carrosselPlantao from "@/assets/carrossel-plantao.png";
+import carrosselPlantao from "@/assets/carrosel-plantao.png";
 
 const portfolioItems = [
   {
     type: "image",
-    src: "@/assets/carrossel-plantao.png"
+    src: "@/assets/carrosel-plantao.png";
     tag: "LP",
     title: "Landing Page – HC & Medidas de Urgência",
     subtitle:
@@ -16,14 +16,14 @@ const portfolioItems = [
   },
   {
     type: "image",
-    src: "@/assets/carrossel-plantao.png"
+    src: "@/assets/carrosel-plantao.png";
     tag: "Criativo",
     title: "Criativo – Flagrante & Custódia",
     subtitle: "Anúncio com geolocalização e copy direta para plantões.",
   },
   {
     type: "image",
-    src: "@/assets/carrossel-plantao.png"
+    src: "@/assets/carrosel-plantao.png";
     tag: "WhatsApp",
     title: "Roteiro de WhatsApp",
     subtitle:
