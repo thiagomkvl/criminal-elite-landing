@@ -4,6 +4,7 @@ import { CheckCircle2 } from "lucide-react";
 // mesmo padrão do Hero
 import carrosselPlantao from "@/assets/carrosel-plantao.png";
 import carrosselHC from "@/assets/slide-hc.png";
+import carrosselwhatsapp from "@/assets/slide-whatsapp.png";
 
 const portfolioItems = [
   {
@@ -24,7 +25,7 @@ const portfolioItems = [
   },
   {
     type: "image",
-    src: carrosselPlantao,
+    src: carrosselwhatsapp,
     tag: "WhatsApp",
     title: "Roteiro de WhatsApp",
     subtitle:
