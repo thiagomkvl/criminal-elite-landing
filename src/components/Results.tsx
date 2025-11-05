@@ -4,7 +4,7 @@ import { CheckCircle2 } from "lucide-react";
 const portfolioItems = [
   {
     type: "image",
-    src: "/portfolio/carrossel-plantao.png",
+    src: "/carrossel-plantao.png",
     tag: "LP",
     title: "Landing Page – HC & Medidas de Urgência",
     subtitle: "Estrutura de conversão com gatilhos de urgência e prova social.",
@@ -12,14 +12,14 @@ const portfolioItems = [
   },
   {
     type: "image",
-    src: "/portfolio/carrossel-plantao.png",
+    src: "/carrossel-plantao.png",
     tag: "Criativo",
     title: "Criativo – Flagrante & Custódia",
     subtitle: "Anúncio com geolocalização e copy direta para plantões.",
   },
   {
     type: "image",
-    src: "/portfolio/carrossel-plantao.png",
+    src: "/carrossel-plantao.png",
     tag: "WhatsApp",
     title: "Roteiro de WhatsApp",
     subtitle: "Sequência de mensagens para agendar consulta em minutos.",
