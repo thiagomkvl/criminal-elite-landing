@@ -2,9 +2,9 @@ import PortfolioCarousel from "@/components/PortfolioCarousel";
 import { CheckCircle2 } from "lucide-react";
 
 // IMPORTS CORRETOS (sem acentos e com bundling)
-import imgPlantaoLP from "@/assets/carrossel-plantao.png";
-import imgPlantaoCriativo from "@/assets/carrossel-plantao.png";
-import imgWhatsapp from "@/assets/carrossel-plantao.png"; // troque se quiser outra
+import imgPlantaoLP from "@/assets/carrosel-plantao.png";
+import imgPlantaoCriativo from "@/assets/carrosel-plantao.png";
+import imgWhatsapp from "@/assets/carrosel-plantao.png";
 import videoResultado from "@/assets/portfolio/resultado-curto.mp4";
 import posterResultado from "@/assets/portfolio/resultado-curto.webp";
 
