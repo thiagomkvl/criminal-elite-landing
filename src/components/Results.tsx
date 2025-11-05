@@ -1,28 +1,33 @@
 import PortfolioCarousel from "@/components/PortfolioCarousel";
 import { CheckCircle2 } from "lucide-react";
 
+// mesmo padrão do Hero
+import carrosselPlantao from "@/assets/carrossel-plantao.png";
+
 const portfolioItems = [
   {
     type: "image",
-    src: "@/assets/background-lp-criminal.png",
+    src: carrosselPlantao,
     tag: "LP",
     title: "Landing Page – HC & Medidas de Urgência",
-    subtitle: "Estrutura de conversão com gatilhos de urgência e prova social.",
+    subtitle:
+      "Estrutura de conversão com gatilhos de urgência e prova social.",
     href: "https://criminal-elite-landing.vercel.app/",
   },
   {
     type: "image",
-    src: "/carrossel-plantao.png",
+    src: carrosselPlantao,
     tag: "Criativo",
     title: "Criativo – Flagrante & Custódia",
     subtitle: "Anúncio com geolocalização e copy direta para plantões.",
   },
   {
     type: "image",
-    src: "/carrossel-plantao.png",
+    src: carrosselPlantao,
     tag: "WhatsApp",
     title: "Roteiro de WhatsApp",
-    subtitle: "Sequência de mensagens para agendar consulta em minutos.",
+    subtitle:
+      "Sequência de mensagens para agendar consulta em minutos.",
   },
 ];
 
@@ -30,19 +35,19 @@ const Beneficios = () => {
   return (
     <section className="container mx-auto px-4 py-16 md:py-24 max-w-7xl">
       <div className="grid lg:grid-cols-2 gap-10 items-start">
-        {/* ---- LADO ESQUERDO: PORTFÓLIO ---- */}
+        {/* ESQUERDA: CARROSSEL */}
         <div className="w-full">
           <PortfolioCarousel
             items={portfolioItems}
-            heightClass="h-[420px] md:h-[500px]" // altura generosa, ajustável
+            heightClass="h-[420px] md:h-[500px]"
+            // autoPlayMs={6000} // opcional
           />
-
           <p className="text-sm text-muted-foreground mt-4 text-center md:text-left">
             Um panorama do fluxo: anúncio → landing page → WhatsApp → fechamento.
           </p>
         </div>
 
-        {/* ---- LADO DIREITO: BENEFÍCIOS ---- */}
+        {/* DIREITA: BENEFÍCIOS */}
         <div className="space-y-6">
           <h2 className="text-3xl md:text-4xl font-black leading-tight">
             Quem vai se{" "}
@@ -74,7 +79,7 @@ const Beneficios = () => {
 
           <div className="pt-6">
             <a
-              href="https://wa.me/5548999999999" // atualiza com teu número
+              href="https://wa.me/5548999999999"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-8 py-4 text-white font-semibold text-base md:text-lg hover:bg-primary/90 transition"
