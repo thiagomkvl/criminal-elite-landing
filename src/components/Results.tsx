@@ -4,7 +4,7 @@ import { CheckCircle2 } from "lucide-react";
 const portfolioItems = [
   {
     type: "image",
-    src: "/carrossel-plantao.png",
+    src: "@/assets/background-lp-criminal.png",
     tag: "LP",
     title: "Landing Page – HC & Medidas de Urgência",
     subtitle: "Estrutura de conversão com gatilhos de urgência e prova social.",
