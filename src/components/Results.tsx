@@ -12,7 +12,7 @@ const portfolioItems = [
   },
   {
     type: "image",
-    src: "/assets/portfolio/criativo-flagrante.webp",
+    src: "/assets/portfolio/carrosel-plantão.png",
     tag: "Criativo",
     title: "Criativo – Flagrante & Custódia",
     subtitle: "Anúncio com geolocalização e copy direta para plantões.",
