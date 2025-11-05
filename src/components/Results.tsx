@@ -1,17 +1,10 @@
 import PortfolioCarousel from "@/components/PortfolioCarousel";
 import { CheckCircle2 } from "lucide-react";
 
-// IMPORTS CORRETOS (sem acentos e com bundling)
-import imgPlantaoLP from "@/assets/carrosel-plantao.png";
-import imgPlantaoCriativo from "@/assets/carrosel-plantao.png";
-import imgWhatsapp from "@/assets/carrosel-plantao.png";
-import videoResultado from "@/assets/portfolio/resultado-curto.mp4";
-import posterResultado from "@/assets/portfolio/resultado-curto.webp";
-
 const portfolioItems = [
   {
     type: "image",
-    src: imgPlantaoLP,
+    src: "assets/carrosel-plantao.png",
     tag: "LP",
     title: "Landing Page – HC & Medidas de Urgência",
     subtitle: "Estrutura de conversão com gatilhos de urgência e prova social.",
@@ -19,25 +12,17 @@ const portfolioItems = [
   },
   {
     type: "image",
-    src: imgPlantaoCriativo,
+    src: "assets/carrosel-plantao.png",
     tag: "Criativo",
     title: "Criativo – Flagrante & Custódia",
     subtitle: "Anúncio com geolocalização e copy direta para plantões.",
   },
   {
     type: "image",
-    src: imgWhatsapp,
+    src: "assets/carrosel-plantao.png",
     tag: "WhatsApp",
     title: "Roteiro de WhatsApp",
     subtitle: "Sequência de mensagens para agendar consulta em minutos.",
-  },
-  {
-    type: "video",
-    src: videoResultado,
-    poster: posterResultado,
-    tag: "Resultado",
-    title: "Agenda previsível",
-    subtitle: "Leads qualificados chegando todos os dias.",
   },
 ];
 
@@ -49,8 +34,9 @@ const Beneficios = () => {
         <div className="w-full">
           <PortfolioCarousel
             items={portfolioItems}
-            heightClass="h-[420px] md:h-[500px]"
+            heightClass="h-[420px] md:h-[500px]" // altura generosa, ajustável
           />
+
           <p className="text-sm text-muted-foreground mt-4 text-center md:text-left">
             Um panorama do fluxo: anúncio → landing page → WhatsApp → fechamento.
           </p>
@@ -88,7 +74,7 @@ const Beneficios = () => {
 
           <div className="pt-6">
             <a
-              href="https://wa.me/5548999999999"
+              href="https://wa.me/5548999999999" // atualiza com teu número
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-8 py-4 text-white font-semibold text-base md:text-lg hover:bg-primary/90 transition"
