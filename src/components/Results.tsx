@@ -3,11 +3,12 @@ import { CheckCircle2 } from "lucide-react";
 
 // mesmo padrão do Hero
 import carrosselPlantao from "@/assets/carrosel-plantao.png";
+import carrosselHC from "@/assets/carrosel-hc.png";
 
 const portfolioItems = [
   {
     type: "image",
-    src: carrosselPlantao,
+    src: carrosselHC,
     tag: "LP",
     title: "Landing Page – HC & Medidas de Urgência",
     subtitle:
