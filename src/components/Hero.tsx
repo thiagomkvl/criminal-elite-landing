@@ -77,7 +77,7 @@ const Hero = () => {
             <span className="sm:hidden">
               Estrutura para{" "}
               <span className="text-red-500 whitespace-nowrap">
-                Advogado Criminal
+                Advogado Bancário
               </span>
               <br />
               captar com urgência e
