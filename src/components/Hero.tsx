@@ -89,7 +89,7 @@ const Hero = () => {
             <span className="hidden sm:inline">
               Estrutura para{" "}
               <span className="text-red-500 whitespace-nowrap">
-                Advogado Criminal
+                Advogado Cívil
               </span>{" "}
               captar com urgência e previsibilidade
             </span>
