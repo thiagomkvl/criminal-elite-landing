@@ -52,11 +52,11 @@ const Beneficios = () => {
         {/* DIREITA: BENEFÍCIOS */}
         <div className="space-y-6">
           <h2 className="text-3xl md:text-4xl font-black leading-tight">
-            Quem vai se{" "}
+            Quem precisa de um Advogado{" "}
             <span className="text-primary underline decoration-primary/60 underline-offset-4">
-              beneficiar
+              Criminalista?
             </span>{" "}
-            desta estrutura
+            
           </h2>
 
           <div className="space-y-4">
