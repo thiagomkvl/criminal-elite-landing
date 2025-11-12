@@ -5,38 +5,38 @@ const HowItWorks = () => {
     {
       icon: FileText,
       number: "01",
-      title: "Contato com escritório",
-      description: "Identificamos exatamente quem são seus clientes ideais e onde encontrá-los"
+      title: "Contato inicial confidencial",
+      description: "Você entra em contato pelo WhatsApp ou formulário, explica de forma simples o que está acontecendo. Tudo é sigiloso, sem exposição."
     },
     {
       icon: Target,
       number: "02",
-      title: "Ajuste posicionamento digital",
-      description: "Definimos como seu escritório será percebido online para atrair os casos certos"
+      title: "Análise jurídica do caso",
+      description: "Nossos advogados avaliam rapidamente a situação, documentos e prazos, identifica riscos, oportunidades de defesa e qual a medida mais adequada para o momento."
     },
     {
       icon: Zap,
       number: "03",
-      title: "Desenvolvimento Estratégico",
-      description: "Criamos sua landing page, campanhas e roteiros personalizados"
+      title: "Definição da estratégia de defesa",
+      description: "Apresentamos, em linguagem clara, quais são os caminhos possíveis (defesa escrita, pedido de liberdade, habeas corpus, recursos etc.) e o que pode ser feito de imediato."
     },
     {
       icon: Settings,
       number: "04",
-      title: "Configuração completa das campanhas",
-      description: "Implementamos tudo pronto: anúncios, pixels, integrações e automações"
+      title: "Formalização e início da atuação",
+      description: "Com tudo alinhado, formalizamos o contrato, honorários e procurações. Você sabe exatamente o que está sendo contratado e o que será feito."
     },
     {
       icon: TrendingUp,
       number: "05",
-      title: "Primeiros Resultados em até 7 dias",
-      description: "Sua estrutura estará gerando consultas qualificadas na primeira semana"
+      title: "Atuação nos processos e diligências",
+      description: "Com tudo alinhado, formalizamos o contrato, honorários e procurações. Você sabe exatamente o que está sendo contratado e o que será feito."
     },
     {
       icon: BarChart3,
       number: "06",
-      title: "Relatórios e Feedbacks",
-      description: "Acompanhe métricas detalhadas e receba insights para otimizar continuamente seus resultados"
+      title: "Acompanhamento e atualizações",
+      description: "Você é informado sobre cada andamento relevante do processo, com explicações objetivas e acessíveis, para saber sempre em que etapa está o seu caso."
     }
   ];
 
