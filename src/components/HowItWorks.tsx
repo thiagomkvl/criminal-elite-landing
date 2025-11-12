@@ -21,22 +21,6 @@ const HowItWorks = () => {
       description: "Criamos sua landing page, campanhas e roteiros personalizados"
     },
     {
-      icon: Settings,
-      number: "04",
-      title: "Configuração completa das campanhas",
-      description: "Implementamos tudo pronto: anúncios, pixels, integrações e automações"
-    },
-    {
-      icon: TrendingUp,
-      number: "05",
-      title: "Primeiros Resultados em até 7 dias",
-      description: "Sua estrutura estará gerando consultas qualificadas na primeira semana"
-    },
-    {
-      icon: BarChart3,
-      number: "06",
-      title: "Relatórios e Feedbacks",
-      description: "Acompanhe métricas detalhadas e receba insights para otimizar continuamente seus resultados"
     }
   ];
 
