@@ -75,23 +75,23 @@ const Hero = () => {
           >
             {/* MOBILE */}
             <span className="sm:hidden">
-              Estrutura para{" "}
+              Precisando de{" "}
               <span className="text-red-500 whitespace-nowrap">
-                Advogado Cívil
+                Advogado Criminalista
               </span>
               <br />
-              captar com urgência e
+              com urgência?
               <br />
-              previsibilidade
+              
             </span>
 
             {/* DESKTOP */}
             <span className="hidden sm:inline">
-              Estrutura para{" "}
+              Precisando de{" "}
               <span className="text-red-500 whitespace-nowrap">
-                Advogado Cívil
+                Advogado Criminalista
               </span>{" "}
-              captar com urgência e previsibilidade
+              captar com urgência?
             </span>
           </h1>
 
