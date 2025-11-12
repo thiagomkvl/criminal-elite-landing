@@ -77,7 +77,7 @@ const Hero = () => {
             <span className="sm:hidden">
               Precisando de{" "}
               <span className="text-red-500 whitespace-nowrap">
-                Advogado Criminalista
+                Advogado Criminal
               </span>
               <br />
               com urgência?
@@ -89,9 +89,9 @@ const Hero = () => {
             <span className="hidden sm:inline">
               Precisando de{" "}
               <span className="text-red-500 whitespace-nowrap">
-                Advogado Criminalista
+                Advogado Criminal
               </span>{" "}
-              captar com urgência?
+              com urgência?
             </span>
           </h1>
 
