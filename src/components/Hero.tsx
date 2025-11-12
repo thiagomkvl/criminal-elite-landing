@@ -96,8 +96,8 @@ const Hero = () => {
           </h1>
 
           <p className="text-[0.97rem] sm:text-base md:text-lg text-white/85 max-w-[92%] mx-auto sm:mx-0">
-            Estamos de prontidão para te ajudar no seu caso. Conte com a experiência de quem já atua
-            há mais de 20 anos nos Tribunais do Ceará
+            Estamos de prontidão para ajudar no seu caso. Conte com a experiência de quem já atua
+            há mais de 20 anos no Direito Criminal.
             
           </p>
 
