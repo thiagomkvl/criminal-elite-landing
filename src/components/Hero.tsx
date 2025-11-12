@@ -96,13 +96,14 @@ const Hero = () => {
           </h1>
 
           <p className="text-[0.97rem] sm:text-base md:text-lg text-white/85 max-w-[92%] mx-auto sm:mx-0">
-            Receba uma estrutura completa de marketing jurídico pronta para gerar
-            novos clientes em até 7 dias
+            Estamos de prontidão para te ajudar no seu caso. Conte com a experiência de quem já atua
+            há mais de 20 anos nos Tribunais do Ceará
+            
           </p>
 
           <div className="pt-2 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center sm:justify-start">
             <Button variant="hero" size="lg" className="w-full sm:w-auto" asChild>
-              <a href="#condicao">Quero essa estrutura</a>
+              <a href="#condicao">Atendimento urgente</a>
             </Button>
             <Button
               variant="outline"
