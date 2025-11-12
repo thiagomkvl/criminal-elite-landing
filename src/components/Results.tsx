@@ -61,11 +61,11 @@ const Beneficios = () => {
 
           <div className="space-y-4">
             {[
-              "Advogados(as) iniciantes no criminal",
-              "Criminalistas buscando previsibilidade de agenda",
-              "Escritórios que querem medir leads, conversas e fechamentos",
-              "Profissionais que precisam de presença e autoridade digital",
-              "Quem quer escalar investimento com controle de demanda",
+              "Pessoas investigadas ou intimadas",
+              "Familiares de alguém preso",
+              "Indiciados que precisam de defesa técnica",
+              "Réus em processos criminais",
+              "Vítimas que necessitam representação jurídica",
             ].map((benefit, index) => (
               <div
                 key={index}
