@@ -12,31 +12,31 @@ const HowItWorks = () => {
       icon: Target,
       number: "02",
       title: "Análise jurídica do caso",
-      description: "Nossos advogados avaliam rapidamente a situação, documentos e prazos, identifica riscos, oportunidades de defesa e qual a medida mais adequada para o momento."
+      description: "Nossos advogados avaliam rapidamente a situação, documentos, prazos, e identificam oportunidades de defesa."
     },
     {
       icon: Zap,
       number: "03",
       title: "Definição da estratégia de defesa",
-      description: "Apresentamos, em linguagem clara, quais são os caminhos possíveis (defesa escrita, pedido de liberdade, habeas corpus, recursos etc.) e o que pode ser feito de imediato."
+      description: "Apresentamos, em linguagem clara, quais são os caminhos possíveis (defesa escrita, pedido de liberdade, habeas corpus, recursos etc.)"
     },
     {
       icon: Settings,
       number: "04",
       title: "Formalização e início da atuação",
-      description: "Com tudo alinhado, formalizamos o contrato, honorários e procurações. Você sabe exatamente o que está sendo contratado e o que será feito."
+      description: "Com tudo alinhado, formalizamos o contrato, honorários e procurações."
     },
     {
       icon: TrendingUp,
       number: "05",
       title: "Atuação nos processos e diligências",
-      description: "Com tudo alinhado, formalizamos o contrato, honorários e procurações. Você sabe exatamente o que está sendo contratado e o que será feito."
+      description: "Passamos a atuar diretamente no caso: petições, audiências, sustentações orais, e demais medidas necessárias à sua defesa."
     },
     {
       icon: BarChart3,
       number: "06",
       title: "Acompanhamento e atualizações",
-      description: "Você é informado sobre cada andamento relevante do processo, com explicações objetivas e acessíveis, para saber sempre em que etapa está o seu caso."
+      description: "Você é informado sobre cada andamento relevante do processo, com explicações objetivas e acessíveis."
     }
   ];
 
