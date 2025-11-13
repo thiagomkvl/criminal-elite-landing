@@ -75,11 +75,11 @@ const Hero = () => {
           >
             {/* MOBILE */}
             <span className="sm:hidden">
-              Atuação Imediata{" "}
+              Precisando de{" "}
               <span className="text-red-500 whitespace-nowrap">
-                flagrantes, custódias e urgências 24h
-              <br />
-              
+                Advogado Criminal
+              </span>{" "}
+              com urgência?
             </span>
 
             {/* DESKTOP */}
