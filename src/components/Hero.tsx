@@ -75,29 +75,28 @@ const Hero = () => {
           >
             {/* MOBILE */}
             <span className="sm:hidden">
-              Precisando de{" "}
+              Atendimento jurídico em{" "}
               <span className="text-red-500 whitespace-nowrap">
-                Advogado Criminal
-              </span>{" "}
-              com urgência?
+                situações de urgência
+              </span>
             </span>
 
             {/* DESKTOP */}
             <span className="hidden sm:inline">
-              Precisando de{" "}
+              Atendimento jurídico em{" "}
               <span className="text-red-500 whitespace-nowrap">
-                Advogado Criminal
-              </span>{" "}
-              com urgência?
+                situações de urgência
+              </span>
             </span>
           </h1>
 
+          {/* SUBTÍTULO */}
           <p className="text-[0.97rem] sm:text-base md:text-lg text-white/85 max-w-[92%] mx-auto sm:mx-0">
-            Estamos de prontidão para ajudar no seu caso. Conte com a experiência de quem já atua
-            há 20 anos no Direito Criminal.
-            
+            Atuação imediata em casos criminais, com discrição, técnica e prioridade.
+            Quando ocorre uma prisão, condução ou investigação, cada minuto importa.
           </p>
 
+          {/* CTAS */}
           <div className="pt-2 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center sm:justify-start">
             <Button variant="hero" size="lg" className="w-full sm:w-auto" asChild>
               <a href="#condicao">Atendimento urgente</a>
@@ -109,7 +108,7 @@ const Hero = () => {
               asChild
             >
               <a
-                href="https://wa.me/48999379752?text=Quero+avancar+com+a+estrutura+digital"
+                href="https://wa.me/48999379752?text=Estou+precisando+de+orientacao+juridica+criminal+com+urgencia"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -117,6 +116,11 @@ const Hero = () => {
               </a>
             </Button>
           </div>
+
+          {/* MICROTEXTO DE SIGILO */}
+          <p className="text-[0.75rem] text-white/60">
+            Atendimento confidencial. Todas as informações são tratadas com absoluto sigilo.
+          </p>
         </div>
       </div>
     </section>
