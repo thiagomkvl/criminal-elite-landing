@@ -63,9 +63,9 @@ const Beneficios = () => {
             {[
               "Pessoas investigadas ou intimadas",
               "Familiares de alguém preso",
-              "Indiciados que precisam de defesa técnica",
+              "Indiciados que precisam de defesa",
               "Réus em processos criminais",
-              "Vítimas que necessitam representação jurídica",
+              "Vítimas que necessitam representação",
             ].map((benefit, index) => (
               <div
                 key={index}
