@@ -78,9 +78,6 @@ const Hero = () => {
               Atuação Imediata{" "}
               <span className="text-red-500 whitespace-nowrap">
                 flagrantes, custódias e urgências 24h
-              </span>
-              <br />
-    
               <br />
               
             </span>
