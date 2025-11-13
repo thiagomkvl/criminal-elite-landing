@@ -33,22 +33,18 @@ const Hero = () => {
       </div>
 
       {/* OVERLAYS */}
-      {/* Gradiente lateral — 50% mais leve no mobile, igual no desktop */}
       <div
         className="
           absolute inset-y-0 left-0
           w-[85%] xs:w-[78%] sm:w-[66%] md:w-[60%] lg:w-[58%]
           bg-gradient-to-r
-          from-black/60 via-black/40 to-transparent        /* mobile/tablet: mais claro */
-          md:from-black md:via-black/85 md:to-transparent  /* desktop: original */
+          from-black/60 via-black/40 to-transparent
+          md:from-black md:via-black/85 md:to-transparent
           pointer-events-none
         "
       />
 
-      {/* Radial discreto (mantido) */}
       <div className="absolute inset-0 bg-[radial-gradient(900px_600px_at_22%_40%,rgba(220,38,38,0.08),transparent)] pointer-events-none" />
-
-      {/* Sombra mobile (20% de opacidade) */}
       <div className="absolute inset-0 bg-black/20 md:hidden pointer-events-none" />
 
       {/* CONTEÚDO */}
@@ -66,10 +62,11 @@ const Hero = () => {
           {/* TÍTULO */}
           <h1
             className="
-              text-[1.85rem] leading-[1.12]
-              sm:text-[2.2rem] sm:leading-[1.12]
-              md:text-5xl md:leading-[1.1]
-              lg:text-6xl font-extrabold tracking-tight
+              text-[1.9rem] leading-[1.15]
+              sm:text-[2.3rem] sm:leading-[1.15]
+              md:text-[2.9rem] md:leading-[1.12]
+              lg:text-[3.6rem] lg:leading-[1.1]
+              font-extrabold tracking-tight
               max-w-[26rem] sm:max-w-none mx-auto sm:mx-0
             "
           >
@@ -81,12 +78,11 @@ const Hero = () => {
               </span>
             </span>
 
-            {/* DESKTOP */}
-            <span className="hidden sm:inline">
-              Atendimento jurídico em{" "}
-              <span className="text-red-500 whitespace-nowrap">
-                situações de urgência
-              </span>
+            {/* DESKTOP — FORÇAR QUEBRA */}
+            <span className="hidden sm:block">
+              Atendimento jurídico em <br />
+              <span className="text-red-500">situações de</span> <br />
+              <span className="text-red-500">urgência</span>
             </span>
           </h1>
 
@@ -117,7 +113,7 @@ const Hero = () => {
             </Button>
           </div>
 
-          {/* MICROTEXTO DE SIGILO */}
+          {/* MICROTEXTO */}
           <p className="text-[0.75rem] text-white/60">
             Atendimento confidencial. Todas as informações são tratadas com absoluto sigilo.
           </p>
