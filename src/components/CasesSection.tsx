@@ -40,10 +40,10 @@ const CasesSection = () => {
       <div className="space-y-8">
       <div className="text-center space-y-3 max-w-3xl mx-auto">
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-black tracking-tight">
-          Principais áreas de atuação
+          
         </h2>
         <p className="text-lg text-muted-foreground">
-          Experiência comprovada no Direito Criminal
+          
         </p>
       </div>
 
