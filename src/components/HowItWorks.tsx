@@ -6,37 +6,37 @@ const HowItWorks = () => {
       icon: FileText,
       number: "01",
       title: "Contato inicial confidencial",
-      description: ""
+      description: "Você entra em contato pelo WhatsApp ou formulário, explica de forma simples o que está acontecendo. Tudo é sigiloso, sem exposição."
     },
     {
       icon: Target,
       number: "02",
       title: "Análise jurídica do caso",
-      description: ""
+      description: "Nossos advogados avaliam rapidamente a situação, documentos, prazos, e identificam oportunidades de defesa."
     },
     {
       icon: Zap,
       number: "03",
       title: "Definição da estratégia de defesa",
-      description: ""
+      description: "Apresentamos, em linguagem clara, quais são os caminhos possíveis (defesa escrita, pedido de liberdade, habeas corpus, recursos etc.)"
     },
     {
       icon: Settings,
       number: "04",
       title: "Formalização e início da atuação",
-      description: ""
+      description: "Com tudo alinhado, formalizamos o contrato, honorários e procurações."
     },
     {
       icon: TrendingUp,
       number: "05",
       title: "Atuação nos processos e diligências",
-      description: ""
+      description: "Passamos a atuar diretamente no caso: petições, audiências, sustentações orais, e demais medidas necessárias à sua defesa."
     },
     {
       icon: BarChart3,
       number: "06",
       title: "Acompanhamento e atualizações",
-      description: ""
+      description: "Você é informado sobre cada andamento relevante do processo, com explicações objetivas e acessíveis."
     }
   ];
 
