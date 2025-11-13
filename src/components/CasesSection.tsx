@@ -41,8 +41,11 @@ const CasesSection = () => {
   ];
 
   return (
-    <section id="casos" className="container mx-auto px-4 py-16 md:py-24 max-w-7xl">
-      <div className="space-y-8">
+    <section
+      id="casos"
+      className="container mx-auto px-4 py-16 md:py-24 max-w-7xl"
+    >
+      <div className="space-y-10">
 
         {/* TÍTULO + SUBTÍTULO */}
         <div className="text-center space-y-3 max-w-3xl mx-auto">
@@ -50,9 +53,9 @@ const CasesSection = () => {
             Áreas de atuação no Direito Criminal
           </h2>
 
-          <p className="text-lg text-white/70">
-            Atuação técnico-jurídica em diferentes frentes do Direito Penal e Processual Penal.
-            Cada caso é tratado com sigilo, responsabilidade e estratégia.
+          <p className="text-lg text-white/70 leading-relaxed">
+            Atuação técnico-jurídica em diferentes frentes do Direito Penal e
+            Processual Penal, sempre com sigilo, responsabilidade e clareza.
           </p>
         </div>
 
@@ -64,34 +67,41 @@ const CasesSection = () => {
               <div
                 key={index}
                 className="
-                  group bg-gradient-card border border-white/10 rounded-xl p-6
-                  transition-all hover:border-red-500/40 hover:shadow-[0_0_15px_rgba(255,0,0,0.12)]
+                  group
+                  bg-[#111]
+                  border border-[#2a2a2a]
+                  rounded-xl p-6
+                  transition-all
+                  hover:border-[#3a3a3a]
+                  hover:bg-[#141414]
                 "
               >
                 <div className="flex items-start gap-4 mb-4">
                   <div
                     className="
-                      shrink-0 w-12 h-12 rounded-lg bg-red-500/10 border border-red-500/30
-                      flex items-center justify-center transition-colors
-                      group-hover:bg-red-500/20
+                      shrink-0 w-12 h-12 rounded-lg
+                      bg-[#1a1a1a]
+                      border border-[#2e2e2e]
+                      flex items-center justify-center
+                      transition-colors
+                      group-hover:bg-[#202020]
                     "
                   >
-                    <Icon className="w-6 h-6 text-red-500" />
+                    <Icon className="w-6 h-6 text-gray-300" />
                   </div>
                 </div>
 
-                <h3 className="font-bold text-lg mb-3 text-white">
+                <h3 className="font-semibold text-lg mb-3 text-white">
                   {item.title}
                 </h3>
 
-                <p className="text-white/70 text-sm leading-relaxed">
+                <p className="text-gray-400 text-sm leading-relaxed">
                   {item.description}
                 </p>
               </div>
             );
           })}
         </div>
-
       </div>
     </section>
   );
