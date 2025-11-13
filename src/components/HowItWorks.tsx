@@ -46,10 +46,10 @@ const HowItWorks = () => {
         {/* Cabeçalho */}
         <div className="text-center space-y-3 max-w-3xl mx-auto">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-black tracking-tight">
-            Como funciona
+            Como atuamos
           </h2>
           <p className="text-lg text-muted-foreground">
-            Nós fazemos tudo por você — do planejamento aos primeiros resultados
+            Conte com a experiência de quem já atua há mais de 20 anos nos Tribunais do Ceará
           </p>
         </div>
 
