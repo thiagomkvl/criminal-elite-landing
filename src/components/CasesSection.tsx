@@ -47,19 +47,22 @@ const CasesSection = () => {
     >
       <div className="space-y-14">
 
-        {/* HEADER alinhado à esquerda */}
-        <div className="space-y-4 max-w-2xl">
+        {/* HEADER CENTRALIZADO */}
+        <div className="text-center space-y-4 max-w-3xl mx-auto">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-black tracking-tight text-white">
-            Áreas de atuação no Direito Criminal
+            Áreas de Atuação no Direito Criminal
           </h2>
 
           <p className="text-lg text-white/70 leading-relaxed">
-            Atuação técnico-jurídica com foco na defesa de direitos, no respeito ao devido processo
-            legal e na condução responsável de casos de alta complexidade.
+            Atuação técnico-jurídica com foco na defesa de direitos, no respeito ao
+            devido processo legal e na condução responsável de casos de alta complexidade.
           </p>
+
+          {/* Linha dourada premium */}
+          <div className="w-20 h-[3px] bg-[#C6A667] mx-auto rounded-full" />
         </div>
 
-        {/* GRID COLUNADO */}
+        {/* GRID - LEFT ALIGNED PREMIUM */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {cases.map((item, index) => {
             const Icon = item.icon;
@@ -72,23 +75,23 @@ const CasesSection = () => {
                   border border-[#2a2a2a]
                   rounded-xl p-6
                   transition-all
-                  hover:border-[#3a3a3a]
-                  hover:bg-[#141414]
-                  text-left
+                  hover:border-[#C6A667]
+                  hover:bg-[#161616]
                 "
               >
                 <div className="flex items-center gap-4 mb-5">
                   <div
                     className="
                       w-12 h-12 rounded-lg
-                      bg-[#1a1a1a]
-                      border border-[#2e2e2e]
+                      bg-[#151515]
+                      border border-[#3a3a3a]
                       flex items-center justify-center
-                      group-hover:bg-[#202020]
-                      transition-colors
+                      transition-all
+                      group-hover:border-[#C6A667]
+                      group-hover:bg-[#1b1b1b]
                     "
                   >
-                    <Icon className="w-6 h-6 text-gray-300" />
+                    <Icon className="w-6 h-6 text-[#C6A667]" />
                   </div>
 
                   <h3 className="font-semibold text-lg text-white leading-tight">
