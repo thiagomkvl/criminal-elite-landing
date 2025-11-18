@@ -9,13 +9,6 @@ import carrosselwhatsapp from "@/assets/slide-whatsapp.png";
 const portfolioItems = [
   {
     type: "image",
-    src: carrosselHC,
-    tag: "Plantão 24 Horas",
-    title: "Intervenção Imediata no Momento da Crise",
-    subtitle:
-      "Nossa equipe entra em ação nas primeiras horas, em qualquer lugar, para garantir que nenhum direito seu seja violado.",  
-    {
-    type: "image",
     src: carrosselPlantao,
     tag: "Atuação com Estratégia",
     title: "Defesa Construída com Base em Experiência",
