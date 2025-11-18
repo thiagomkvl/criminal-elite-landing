@@ -44,7 +44,15 @@ const CasesSection = () => {
   return (
     <section
       id="casos"
-      className="container mx-auto py-16 md:py-24 max-w-7xl" // CLASSE px-4 REMOVIDA AQUI
+      className="
+        relative /* Adicionado para garantir que overlays funcionem bem se necessário */
+        overflow-x-hidden /* MUDANÇA CRÍTICA: Esconde qualquer estouro horizontal */
+        w-full /* Garante que a seção ocupe 100% da largura disponível */
+        max-w-7xl /* MUDANÇA: Max-width aplicado aqui, fora do container */
+        mx-auto /* Centraliza a seção */
+        px-4 sm:px-6 md:px-8 lg:px-12 /* MUDANÇA: Paddings responsivos controlados manualmente */
+        py-16 md:py-24
+      "
     >
       <div className="space-y-14">
 
