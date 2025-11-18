@@ -3,16 +3,16 @@ import { Quote } from "lucide-react";
 const Testimonials = () => {
   const testimonials = [
     {
-      quote: "Publicamos a LP e os templates no mesmo dia. Em 72h já tínhamos conversas qualificadas e o primeiro cliente fechado.",
-      author: "C. Almeida",
-      oab: "OAB/SP",
-      avatar: "https://i.pravatar.cc/150?img=33"
+      quote: "Atendimento atencioso, muito claro e objetivo.",
+      author: "A. Cavalcante",
+      oab: "TRAIRI/CE",
+      avatar: "https://i.pravatar.cc/150?img=18"
     },
     {
-      quote: "Estrutura simples, direta e eficaz. O roteiro de WhatsApp facilita o fechamento.",
+      quote: "O melhor advogado criminalista da região.",
       author: "M. Ribeiro",
-      oab: "OAB/SC",
-      avatar: "https://i.pravatar.cc/150?img=47"
+      oab: "TRAIRI/CE",
+      avatar: "https://i.pravatar.cc/150?img=53"
     }
   ];
 
@@ -21,10 +21,10 @@ const Testimonials = () => {
       <div className="space-y-12">
         <div className="text-center space-y-3 max-w-3xl mx-auto">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-black tracking-tight">
-            Resultados de quem aplicou
+            Depoimento de Clientes
           </h2>
           <p className="text-lg text-muted-foreground">
-            Advogados criminalistas que estruturaram seu marketing digital
+        
           </p>
         </div>
 
