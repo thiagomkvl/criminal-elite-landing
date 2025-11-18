@@ -2,6 +2,7 @@ import { Scale, Shield, Clock, Users, TrendingUp, FileText } from "lucide-react"
 
 const CasesSection = () => {
   const cases = [
+    // ... (dados inalterados) ...
     {
       icon: Scale,
       title: "Habeas corpus e medidas urgentes",
@@ -43,7 +44,7 @@ const CasesSection = () => {
   return (
     <section
       id="casos"
-      className="container mx-auto px-4 py-16 md:py-24 max-w-7xl"
+      className="container mx-auto py-16 md:py-24 max-w-7xl" // CLASSE px-4 REMOVIDA AQUI
     >
       <div className="space-y-14">
 
@@ -52,13 +53,12 @@ const CasesSection = () => {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-black tracking-tight text-white">
             Áreas de Atuação no Direito Criminal
           </h2>
-
+          {/* ... (restante do header) ... */}
           <p className="text-lg text-white/70 leading-relaxed">
             Atuação técnico-jurídica com foco na defesa de direitos, no respeito ao
             devido processo legal e na condução responsável de casos de alta complexidade.
           </p>
 
-          {/* Linha dourada premium */}
           <div className="w-20 h-[3px] bg-[#C6A667] mx-auto rounded-full" />
         </div>
 
