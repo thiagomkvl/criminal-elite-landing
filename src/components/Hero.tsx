@@ -94,7 +94,7 @@ const Hero = () => {
             "
           >
             {/* NOVO TEXTO PARA MOBILE E DESKTOP SIMPLIFICADO */}
-            Atendimento jurídico em <br className="hidden sm:block" />
+            Atendimento jurídico especializado em <br className="hidden sm:block" />
             <span className="text-red-500">
               situações de <br className="hidden sm:block" />
               urgência
