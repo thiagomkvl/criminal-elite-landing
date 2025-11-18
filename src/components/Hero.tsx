@@ -6,14 +6,14 @@ const Hero = () => {
   return (
     <section className="relative overflow-hidden bg-[#0b0606] min-h-[90vh] md:min-h-[100vh] flex items-center">
       {/* BACKGROUND */}
-      <div className="absolute -inset-[2px] pointer-events-none">
+      <div className="absolute inset-0 pointer-events-none"> {/* inset-0 ao invés de -inset-[2px] para simplificar */}
         {/* Mobile background */}
         <img
           src={heroBgMobile}
           alt="Criminal Elite Mobile"
           className={`
             w-full h-full object-cover md:hidden
-            object-[50%_bottom] /* MUDANÇA CRÍTICA AQUI: Ancorar a imagem na parte inferior */
+            object-[50%_bottom] /* Ancorar na parte inferior para liberar o topo */
             opacity-95
             [backface-visibility:hidden] [transform:translateZ(0)]
           `}
@@ -33,7 +33,8 @@ const Hero = () => {
         />
       </div>
 
-      {/* OVERLAYS */}
+      {/* OVERLAYS (Mais robustos e alinhados para clareza) */}
+      {/* Overlay da ESQUERDA (mantido para desktop e adaptado para mobile) */}
       <div
         className="
           absolute inset-y-0 left-0
@@ -45,39 +46,40 @@ const Hero = () => {
         "
       />
 
-      {/* OVERLAYS DE ESCURECIMENTO MAIS ROBUSTOS PARA MOBILE */}
+      {/* Overlay de ESCURECIMENTO GERAL para mobile */}
+      {/* Um gradiente mais abrangente do topo à base para garantir contraste */}
       <div
         className="
           absolute inset-0
-          bg-gradient-to-b from-black/80 via-black/40 to-transparent /* Mais escuro no topo */
-          md:hidden
+          bg-gradient-to-b from-black/80 via-black/40 to-black/80 /* Escuro em cima, no meio e embaixo */
+          md:hidden /* Aplicar apenas no mobile */
           pointer-events-none
         "
       />
-      <div
-        className="
-          absolute inset-0
-          bg-gradient-to-t from-black/80 via-black/40 to-transparent /* Mais escuro na base */
-          md:hidden
-          pointer-events-none
-        "
-      />
-      {/* FIM DOS NOVOS OVERLAYS */}
 
+      {/* Overlay radial para efeito de luz (mantido) */}
       <div className="absolute inset-0 bg-[radial-gradient(900px_600px_at_22%_40%,rgba(220,38,38,0.08),transparent)] pointer-events-none" />
 
-      {/* CONTEÚDO */}
-      <div className="relative z-10 w-full h-full grid place-items-center md:place-items-start"> {/* MUDANÇA AQUI: place-items-center para centralizar verticalmente no mobile, e depois ajustar com mt */}
+      {/* CONTEÚDO PRINCIPAL */}
+      <div
+        className="
+          relative z-10 w-full h-full flex flex-col justify-end /* MUDANÇA: Usar flexbox para posicionar o conteúdo */
+          md:justify-center /* Desktop: centraliza verticalmente */
+          items-center /* Centraliza horizontalmente o conteúdo (para mobile) */
+          md:items-start /* Desktop: alinha à esquerda */
+        "
+      >
         <div
           className="
-            w-full max-w-[780px]
+            w-full max-w-[24rem] /* Largura máxima mais contida para mobile */
             px-5 sm:px-6
+            md:max-w-[780px] /* Restaura largura para desktop */
             md:pl-[6vw] lg:pl-[8vw] xl:pl-[10vw] md:pr-0
             text-center sm:text-left text-white space-y-5
-            mt-[30vh] /* AJUSTE PARA EMPURRAR MAIS PARA BAIXO NO MOBILE */
-            pb-12 /* Adiciona espaçamento inferior para descolar dos botões na parte de baixo */
+            mb-16 /* MARGEM INFERIOR MAIOR PARA EMPURRAR O CONTEÚDO PARA CIMA, SE NECESSÁRIO */
+            md:mb-0 /* Zera a margem inferior no desktop */
+            mt-[calc(50vh_-_10rem)] /* Calcula a margem superior para posicionar o texto */
             md:mt-0 /* Zera a margem superior no desktop */
-            md:self-center /* Mantém self-center no desktop */
           "
         >
           {/* TÍTULO */}
@@ -88,22 +90,14 @@ const Hero = () => {
               md:text-[2.9rem] md:leading-[1.12]
               lg:text-[3.6rem] lg:leading-[1.1]
               font-extrabold tracking-tight
-              max-w-[24rem] mx-auto sm:mx-0
+              mx-auto sm:mx-0 /* Centraliza no mobile, alinha à esquerda no desktop */
             "
           >
-            {/* MOBILE */}
-            <span className="sm:hidden">
-              Atendimento jurídico em{" "}
-              <span className="text-red-500 whitespace-nowrap">
-                situações de urgência
-              </span>
-            </span>
-
-            {/* DESKTOP — FORÇAR QUEBRA */}
-            <span className="hidden sm:block">
-              Atendimento jurídico em <br />
-              <span className="text-red-500">situações de</span> <br />
-              <span className="text-red-500">urgência</span>
+            {/* NOVO TEXTO PARA MOBILE E DESKTOP SIMPLIFICADO */}
+            Atendimento jurídico em <br className="hidden sm:block" />
+            <span className="text-red-500">
+              situações de <br className="hidden sm:block" />
+              urgência
             </span>
           </h1>
 
