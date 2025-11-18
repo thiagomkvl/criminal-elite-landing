@@ -14,15 +14,12 @@ const portfolioItems = [
     title: "Apareça para futuros clientes em momentos de urgência",
     subtitle:
       "Estratégia de presença digital construída para gerar autoridade e resposta imediata.",
-    href: "https://wa.me/85988004853?text=Estou+precisando+de+orientacao+juridica+criminal+com+urgencia",
-  },
   {
     type: "image",
     src: carrosselPlantao,
     tag: "Atuação com Estratégia",
     title: "Defesa Construída com Base em Experiência",
     subtitle: "Analisamos cada detalhe do processo para traçar a linha de defesa mais sólida, com resultados comprovados em casos complexos.",
-    href: "https://wa.me/85988004853?text=Estou+precisando+de+orientacao+juridica+criminal+com+urgencia",
   },
   {
     type: "image",
@@ -31,7 +28,6 @@ const portfolioItems = [
     title: "Acompanhamento Personalizado e Discreto",
     subtitle:
       "Você terá um canal de comunicação exclusivo com o advogado, recebendo atualizações constantes com total discrição e sigilo.",
-    href: "https://wa.me/85988004853?text=Estou+precisando+de+orientacao+juridica+criminal+com+urgencia",
   },
 ];
 
