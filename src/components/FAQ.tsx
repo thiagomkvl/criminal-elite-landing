@@ -21,7 +21,7 @@ const FAQ = () => {
     },
     {
       question: "Vocês têm experiência em casos complexos como o meu?",
-      answer: "Sim. Somos especializados em Direito Penal e lidamos constantemente com casos complexos (mencionar 1-2 áreas de alta complexidade, ex: crimes empresariais, júri, lavagem de dinheiro). Nossa experiência é a sua principal garantia."
+      answer: "Sim. Somos especializados em Direito Penal e lidamos constantemente com casos complexos (crimes empresariais, júri, lavagem de dinheiro). Nossa experiência é a sua principal garantia."
     },
     {
       question: "Quanto custa uma consulta ou a defesa do meu caso?",
