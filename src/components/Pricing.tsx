@@ -44,7 +44,7 @@ const Pricing = () => {
               className="w-full"
               asChild
             >
-              <a href="wa.me/85988004853" target="_blank" rel="noopener noreferrer">
+              <a href="https://wa.me/85988004853?text=Estou+precisando+de+orientacao+juridica+criminal+com+urgencia" target="_blank" rel="noopener noreferrer">
                 Atendimento com Urgência
               </a>
             </Button>
@@ -54,7 +54,7 @@ const Pricing = () => {
               className="w-full"
               asChild
             >
-              <a href="wa.me/85988004853" target="_blank" rel="noopener noreferrer">
+              <a href="https://wa.me/85988004853?text=Estou+precisando+de+orientacao+juridica+criminal+com+urgencia" target="_blank" rel="noopener noreferrer">
                 Preciso de ajuda
               </a>
             </Button>
