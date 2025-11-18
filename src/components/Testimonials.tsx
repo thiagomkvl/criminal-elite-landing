@@ -3,7 +3,7 @@ import { Quote } from "lucide-react";
 const Testimonials = () => {
   const testimonials = [
     {
-      quote: "Fui acusado injustamente e estava em desespero. Desde o primeiro contato, a equipe do escritório demonstrou uma competência técnica fora do comum. O Dr. Ricardo Almeida não apenas dominava a lei, mas também me tratou com a humanidade e o respeito que eu precisava naquele momento terrível. Eles traçaram uma estratégia de defesa impecável, que resultou na absolvição completa. Devo minha liberdade e minha reputação a este escritório. O compromisso deles é real.",
+      quote: "Fui acusado injustamente e estava em desespero. Desde o primeiro contato, a equipe do escritório demonstrou uma competência técnica fora do comum. O Dr Colares não apenas dominava a lei, mas também me tratou com a humanidade e o respeito que eu precisava naquele momento terrível. Eles traçaram uma estratégia de defesa impecável, que resultou na absolvição completa. Devo minha liberdade e minha reputação a este escritório. O compromisso deles é real.",
       author: "A. Cavalcante",
       oab: "TRAIRI/CE",
       avatar: "https://i.pravatar.cc/150?img=18"
