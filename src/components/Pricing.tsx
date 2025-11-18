@@ -99,10 +99,10 @@ const Pricing = () => {
 
           <div className="bg-success/10 border border-success/30 rounded-xl p-6">
             <p className="text-sm font-bold text-success mb-2">
-              ✓ Garantia Incondicional de 7 Dias
+              ✓ Sua Liberdade e Seus Direitos Exigem Urgência.
             </p>
             <p className="text-sm text-foreground/80">
-              Se a estrutura não atender suas expectativas, devolvemos 100% do seu investimento. Sem perguntas.
+              Não tome nenhuma decisão antes de falar com nossa equipe especializada.
             </p>
           </div>
         </div>
