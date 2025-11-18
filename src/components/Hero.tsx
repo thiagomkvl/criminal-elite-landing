@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import heroBgDesktop from "@/assets/background-lp-criminal-desktop.png";
-import heroBgMobile from "@/assets/background-lp-criminal-mob.png";
+import heroBgMobile from "@/assets/hero-criminal-mob.png";
 
 const Hero = () => {
   return (
