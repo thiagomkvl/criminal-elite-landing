@@ -95,7 +95,7 @@ const Hero = () => {
           {/* CTAS */}
           <div className="pt-2 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center sm:justify-start">
             <Button variant="hero" size="lg" className="w-full sm:w-auto" asChild>
-              <a href="#condicao">Atendimento urgente</a>
+              <a href="https://wa.me/85988004853?text=Estou+precisando+de+orientacao+juridica+criminal+com+urgencia">Atendimento urgente</a>
             </Button>
             <Button
               variant="outline"
@@ -104,7 +104,7 @@ const Hero = () => {
               asChild
             >
               <a
-                href="https://wa.me/48999379752?text=Estou+precisando+de+orientacao+juridica+criminal+com+urgencia"
+                href="https://wa.me/85988004853?text=Estou+precisando+de+orientacao+juridica+criminal+com+urgencia"
                 target="_blank"
                 rel="noopener noreferrer"
               >
