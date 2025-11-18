@@ -80,7 +80,7 @@ const Beneficios = () => {
               Quero atendimento 
             </a>
             <p className="text-xs text-muted-foreground mt-2">
-              Sigilo Absoluto Garantido
+              
             </p>
           </div>
         </div>
