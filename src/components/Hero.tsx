@@ -13,7 +13,8 @@ const Hero = () => {
           alt="Criminal Elite Mobile"
           className={`
             w-full h-full object-cover md:hidden
-            object-[50%_40%] /* AJUSTADO: Desloca a imagem um pouco mais para baixo, dando mais espaço acima */ opacity-95
+            object-[50%_bottom] /* MUDANÇA CRÍTICA AQUI: Ancorar a imagem na parte inferior */
+            opacity-95
             [backface-visibility:hidden] [transform:translateZ(0)]
           `}
           loading="eager"
@@ -33,7 +34,6 @@ const Hero = () => {
       </div>
 
       {/* OVERLAYS */}
-      {/* Overlay da ESQUERDA (mantido para desktop e adaptado para mobile) */}
       <div
         className="
           absolute inset-y-0 left-0
@@ -45,20 +45,20 @@ const Hero = () => {
         "
       />
 
-      {/* NOVO OVERLAY DE ESCURECIMENTO MAIS ROBUSTO PARA MOBILE - Combina gradiente vertical */}
+      {/* OVERLAYS DE ESCURECIMENTO MAIS ROBUSTOS PARA MOBILE */}
       <div
         className="
           absolute inset-0
-          bg-gradient-to-b from-black/60 via-black/20 to-transparent /* Gradiente de cima para baixo */
-          md:hidden /* Aplicar apenas no mobile */
+          bg-gradient-to-b from-black/80 via-black/40 to-transparent /* Mais escuro no topo */
+          md:hidden
           pointer-events-none
         "
       />
       <div
         className="
           absolute inset-0
-          bg-gradient-to-t from-black/80 via-black/30 to-transparent /* Gradiente de baixo para cima (mais forte) */
-          md:hidden /* Aplicar apenas no mobile */
+          bg-gradient-to-t from-black/80 via-black/40 to-transparent /* Mais escuro na base */
+          md:hidden
           pointer-events-none
         "
       />
@@ -67,18 +67,17 @@ const Hero = () => {
       <div className="absolute inset-0 bg-[radial-gradient(900px_600px_at_22%_40%,rgba(220,38,38,0.08),transparent)] pointer-events-none" />
 
       {/* CONTEÚDO */}
-      <div className="relative z-10 w-full h-full grid">
+      <div className="relative z-10 w-full h-full grid place-items-center md:place-items-start"> {/* MUDANÇA AQUI: place-items-center para centralizar verticalmente no mobile, e depois ajustar com mt */}
         <div
           className="
-            self-center /* VOLTEI PARA self-center, mas ajustaremos o margin/padding */
             w-full max-w-[780px]
             px-5 sm:px-6
             md:pl-[6vw] lg:pl-[8vw] xl:pl-[10vw] md:pr-0
             text-center sm:text-left text-white space-y-5
-            pt-[25vh] /* AUMENTA O ESPAÇAMENTO DO TOPO NO MOBILE */
-            pb-12
-            sm:pt-0 /* Zera o padding-top no desktop */
-            sm:self-center /* Mantém self-center no desktop */
+            mt-[30vh] /* AJUSTE PARA EMPURRAR MAIS PARA BAIXO NO MOBILE */
+            pb-12 /* Adiciona espaçamento inferior para descolar dos botões na parte de baixo */
+            md:mt-0 /* Zera a margem superior no desktop */
+            md:self-center /* Mantém self-center no desktop */
           "
         >
           {/* TÍTULO */}
@@ -89,7 +88,7 @@ const Hero = () => {
               md:text-[2.9rem] md:leading-[1.12]
               lg:text-[3.6rem] lg:leading-[1.1]
               font-extrabold tracking-tight
-              max-w-[24rem] /* LARGURA MÁXIMA PARA MOBILE */ mx-auto sm:mx-0
+              max-w-[24rem] mx-auto sm:mx-0
             "
           >
             {/* MOBILE */}
