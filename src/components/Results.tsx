@@ -19,17 +19,17 @@ const portfolioItems = [
   {
     type: "image",
     src: carrosselPlantao,
-    tag: "Bônus",
-    title: "Anúncios que falam com quem precisa de você agora",
-    subtitle: "Geolocalização direta para plantões.",
+    tag: "Atuação com Estratégia",
+    title: "Defesa Construída com Base em Experiência",
+    subtitle: "Analisamos cada detalhe do processo para traçar a linha de defesa mais sólida, com resultados comprovados em casos complexos.",
   },
   {
     type: "image",
     src: carrosselwhatsapp,
-    tag: "Bônus",
-    title: "Transforme seu WhatsApp em uma agenda previsível",
+    tag: "Comunicação Direta",
+    title: "Acompanhamento Personalizado e Discreto",
     subtitle:
-      "Acompanhamento semanal para manter um volume constante de clientes no escritório",
+      "Você terá um canal de comunicação exclusivo com o advogado, recebendo atualizações constantes com total discrição e sigilo.",
   },
 ];
 
@@ -81,15 +81,15 @@ const Beneficios = () => {
 
           <div className="pt-6">
             <a
-              href="https://wa.me/5548999999999"
+              href="https://wa.me/85988004853?text=Estou+precisando+de+orientacao+juridica+criminal+com+urgencia"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-8 py-4 text-white font-semibold text-base md:text-lg hover:bg-primary/90 transition"
             >
-              Quero me inscrever →
+              Quero atendimento 
             </a>
             <p className="text-xs text-muted-foreground mt-2">
-              Sem mensalidades. Entrega personalizada em até 7 dias.
+              Sigilo Absoluto Garantido
             </p>
           </div>
         </div>
