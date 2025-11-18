@@ -10,10 +10,10 @@ const portfolioItems = [
   {
     type: "image",
     src: carrosselHC,
-    tag: "Bônus",
-    title: "Apareça para futuros clientes em momentos de urgência",
+    tag: "Plantão 24 Horas",
+    title: "Intervenção Imediata no Momento da Crise",
     subtitle:
-      "Estratégia de presença digital construída para gerar autoridade e resposta imediata.",
+      "Nossa equipe entra em ação nas primeiras horas, em qualquer lugar, para garantir que nenhum direito seu seja violado.",
   {
     type: "image",
     src: carrosselPlantao,
