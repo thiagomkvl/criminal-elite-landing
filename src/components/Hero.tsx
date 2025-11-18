@@ -44,19 +44,31 @@ const Hero = () => {
         "
       />
 
+      {/* NOVO OVERLAY DE ESCURECIMENTO PARA MOBILE */}
+      <div
+        className="
+          absolute inset-0
+          bg-gradient-to-t from-black/80 via-black/30 to-transparent /* Gradiente mais forte */
+          md:hidden /* Aplicar apenas no mobile */
+          pointer-events-none
+        "
+      />
+      {/* FIM DO NOVO OVERLAY */}
+
       <div className="absolute inset-0 bg-[radial-gradient(900px_600px_at_22%_40%,rgba(220,38,38,0.08),transparent)] pointer-events-none" />
-      <div className="absolute inset-0 bg-black/20 md:hidden pointer-events-none" />
+      {/* O overlay bg-black/20 md:hidden que você já tinha foi substituído pelo novo, que é mais robusto */}
 
       {/* CONTEÚDO */}
       <div className="relative z-10 w-full h-full grid">
         <div
           className="
-            self-center
+            self-end /* ALINHA O CONTEÚDO AO FINAL (INFERIOR) */
             w-full max-w-[780px]
             px-5 sm:px-6
             md:pl-[6vw] lg:pl-[8vw] xl:pl-[10vw] md:pr-0
             text-center sm:text-left text-white space-y-5
-            mt-[50vh] sm:mt-0
+            pb-12 /* ADICIONA ESPAÇAMENTO INFERIOR PARA DESCOLAR DO FIM DA TELA */
+            /* Removido mt-[50vh] sm:mt-0, pois 'self-end' cuida do posicionamento */
           "
         >
           {/* TÍTULO */}
@@ -67,7 +79,7 @@ const Hero = () => {
               md:text-[2.9rem] md:leading-[1.12]
               lg:text-[3.6rem] lg:leading-[1.1]
               font-extrabold tracking-tight
-              max-w-[26rem] sm:max-w-none mx-auto sm:mx-0
+              max-w-[24rem] /* LARGURA MÁXIMA UM POUCO MENOR PARA MOBILE */ mx-auto sm:mx-0
             "
           >
             {/* MOBILE */}
