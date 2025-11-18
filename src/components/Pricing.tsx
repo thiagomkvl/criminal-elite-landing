@@ -19,7 +19,7 @@ const Pricing = () => {
              
             </p>
             <div className="flex items-baseline gap-2">
-              <span className="text-5xl md:text-6xl font-black tracking-tight">ATENDIMENTO 24h</span>
+              <span className="text-5xl md:text-6xl font-black tracking-tight">Atendimento 24h</span>
               <span className="text-muted-foreground"></span>
             </div>
           </div>
