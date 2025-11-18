@@ -3,10 +3,10 @@ import { CheckCircle2 } from "lucide-react";
 
 const Pricing = () => {
   const guarantees = [
-    "Garantia incondicional 7 dias",
-    "Entrega em até 7 dias (itens personalizados)",
-    "Suporte via WhatsApp",
-    "Atualizações incluídas"
+    "Consulta Imediata com Especialista: A primeira orientação é crucial.",
+    "Sigilo Absoluto e Total Discrição em todas as etapas da defesa.",
+    "Estratégia de Defesa Montada em Horas após o primeiro contato.",
+    "Suporte Direto via Telefone/WhatsApp para momentos de crise."
   ];
 
   return (
@@ -16,16 +16,16 @@ const Pricing = () => {
         <div className="bg-gradient-to-br from-card-elevated to-card border border-primary/30 rounded-2xl p-8 md:p-10 shadow-glow space-y-6">
           <div className="space-y-2">
             <p className="text-xs uppercase tracking-widest text-primary">
-              Condição de lançamento
+             
             </p>
             <div className="flex items-baseline gap-2">
-              <span className="text-5xl md:text-6xl font-black tracking-tight">R$ 297</span>
-              <span className="text-muted-foreground">a partir de</span>
+              <span className="text-5xl md:text-6xl font-black tracking-tight">ATENDIMENTO DE URGÊNCIA 24H</span>
+              <span className="text-muted-foreground">Não espere. Sua defesa começa com um contato.</span>
             </div>
           </div>
 
           <p className="text-lg text-foreground/90">
-            Acesso imediato aos arquivos + suporte por WhatsApp
+            Não espere. Sua defesa começa com um contato.
           </p>
 
           <ul className="space-y-3">
@@ -44,8 +44,8 @@ const Pricing = () => {
               className="w-full"
               asChild
             >
-              <a href="https://checkout.seulink.com/criminal" target="_blank" rel="noopener noreferrer">
-                Garantir minha estrutura
+              <a href="wa.me/85988004853" target="_blank" rel="noopener noreferrer">
+                Atendimento com Urgência
               </a>
             </Button>
             <Button 
@@ -54,7 +54,7 @@ const Pricing = () => {
               className="w-full"
               asChild
             >
-              <a href="https://wa.me/48999379752?text=Preciso+de+ajuda" target="_blank" rel="noopener noreferrer">
+              <a href="wa.me/85988004853" target="_blank" rel="noopener noreferrer">
                 Preciso de ajuda
               </a>
             </Button>
@@ -65,25 +65,25 @@ const Pricing = () => {
         <div className="space-y-8 lg:pt-8">
           <div className="space-y-4">
             <h3 className="text-2xl md:text-3xl font-bold text-foreground">
-              Por que investir agora?
+              POR QUE ESCOLHER NOSSA DEFESA AGORA?
             </h3>
             <ul className="space-y-4">
               {[
                 {
-                  title: "Implantação rápida",
-                  desc: "Estrutura pronta para começar em dias, não meses"
+                  title: "Ação Imediata",
+                  desc: "Iniciamos a análise e a Defesa do Caso nas Primeiras Horas para proteger seus direitos desde o início."
                 },
                 {
-                  title: "Baseado em cases reais",
-                  desc: "Estratégias validadas por advogados criminalistas"
+                  title: "Resultados Reais",
+                  desc: "Sua defesa será conduzida por uma equipe com sucesso comprovado em casos complexos e delicados."
                 },
                 {
-                  title: "Suporte incluído",
-                  desc: "Tire dúvidas durante a implementação"
+                  title: "Suporte 24/7",
+                  desc: "Você terá um canal direto para acompanhar cada passo da sua defesa e ter paz de espírito."
                 },
                 {
-                  title: "Sem mensalidades",
-                  desc: "Pagamento único para acesso vitalício"
+                  title: "Transparência Total",
+                  desc: "Honorários claros, justos e alinhados com o seu caso."
                 }
               ].map((item, index) => (
                 <li key={index} className="flex gap-3 items-start">
