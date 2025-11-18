@@ -8,28 +8,28 @@ import {
 const FAQ = () => {
   const faqs = [
     {
-      question: "Preciso ter experiência com anúncios?",
-      answer: "Não. Você recebe segmentações de partida, templates prontos e um checklist detalhado para publicar sua primeira campanha em menos de 1 hora. Tudo já validado e testado."
+      question: "Estou em uma situação de urgência. Vocês atendem fora do horário comercial?",
+      answer: "Absolutamente. Nosso plantão criminal é 24 horas e 7 dias por semana. Em casos de prisão em flagrante ou emergência, a intervenção imediata é crucial. Ligue ou envie WhatsApp agora."
     },
     {
-      question: "Isso está alinhado à ética da OAB?",
-      answer: "Sim, completamente. A comunicação é informativa e respeitosa, sem promessas individualizadas de resultado. Seguimos todas as diretrizes do Código de Ética e do Provimento 205/2021 da OAB."
+      question: "Como é garantido o sigilo e a privacidade do meu caso?",
+      answer: "O sigilo é total e inegociável, conforme nosso Código de Ética e a natureza sensível da sua situação. Nenhuma informação é compartilhada sem sua permissão."
     },
     {
-      question: "Quanto preciso investir em anúncios?",
-      answer: "Recomendamos começar com R$ 20-30/dia para testar. Com a estrutura otimizada, muitos advogados começam a ter retorno já nas primeiras semanas. O investimento é escalável conforme seus resultados."
+      question: "Qual é o primeiro passo para contratar seus serviços?",
+      answer: "O primeiro passo é uma consulta detalhada. Nela, analisamos seu caso, entendemos o contexto e apresentamos a estratégia jurídica. O agendamento é rápido e pode ser feito agora mesmo."
     },
     {
-      question: "Quanto tempo leva para implementar?",
-      answer: "A implementação completa pode ser feita em até 7 dias. Perfil nas redes sociais pode ser publicado no mesmo dia, e as campanhas de anúncios podem estar rodando em 24-48h após a aprovação."
+      question: "Vocês têm experiência em casos complexos como o meu?",
+      answer: "Sim. Somos especializados em Direito Penal e lidamos constantemente com casos complexos (mencionar 1-2 áreas de alta complexidade, ex: crimes empresariais, júri, lavagem de dinheiro). Nossa experiência é a sua principal garantia."
     },
     {
-      question: "Recebo suporte durante a implementação?",
-      answer: "Sim! Você tem acesso direto via WhatsApp para tirar dúvidas durante a implementação. Também fornecemos checklists e materiais de apoio para facilitar cada etapa."
+      question: "Quanto custa uma consulta ou a defesa do meu caso?",
+      answer: "Os honorários variam muito conforme a complexidade, a fase processual e o tipo de crime. Por isso, é essencial a consulta inicial. Após a análise, apresentaremos uma proposta clara e transparente."
     },
     {
-      question: "A estrutura funciona para qualquer cidade?",
-      answer: "Sim. As estratégias são adaptáveis para qualquer localidade do Brasil. A segmentação geográfica dos anúncios garante que você alcance apenas pessoas da sua região de atuação."
+      question: "Vocês atendem apenas na minha cidade/estado?",
+      answer: "Atuamos em todo o território nacional. Com a digitalização dos processos, podemos iniciar sua defesa e te representar em qualquer estado do Brasil, de forma eficiente e rápida."
     }
   ];
 
