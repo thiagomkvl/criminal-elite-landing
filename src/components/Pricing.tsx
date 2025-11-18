@@ -19,8 +19,8 @@ const Pricing = () => {
              
             </p>
             <div className="flex items-baseline gap-2">
-              <span className="text-5xl md:text-6xl font-black tracking-tight">ATENDIMENTO DE URGÊNCIA 24H</span>
-              <span className="text-muted-foreground">Não espere. Sua defesa começa com um contato.</span>
+              <span className="text-5xl md:text-6xl font-black tracking-tight">ATENDIMENTO 24h</span>
+              <span className="text-muted-foreground"></span>
             </div>
           </div>
 
@@ -65,7 +65,7 @@ const Pricing = () => {
         <div className="space-y-8 lg:pt-8">
           <div className="space-y-4">
             <h3 className="text-2xl md:text-3xl font-bold text-foreground">
-              POR QUE ESCOLHER NOSSA DEFESA AGORA?
+              Por que nos escolher?
             </h3>
             <ul className="space-y-4">
               {[
