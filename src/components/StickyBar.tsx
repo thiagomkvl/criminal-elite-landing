@@ -30,7 +30,7 @@ const StickyBar = () => {
             className="w-full"
             asChild
           >
-            <a href="#condicao">Quero essa estrutura</a>
+            <a href="https://wa.me/85988004853?text=Estou+precisando+de+orientacao+juridica+criminal+com+urgencia">Quero Atendimentoa</a>
           </Button>
         </div>
       </div>
