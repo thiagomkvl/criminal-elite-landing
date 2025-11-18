@@ -3,13 +3,13 @@ import { Quote } from "lucide-react";
 const Testimonials = () => {
   const testimonials = [
     {
-      quote: "Atendimento atencioso, muito claro e objetivo.",
+      quote: "Fui acusado injustamente e estava em desespero. Desde o primeiro contato, a equipe do escritório demonstrou uma competência técnica fora do comum. O Dr. Ricardo Almeida não apenas dominava a lei, mas também me tratou com a humanidade e o respeito que eu precisava naquele momento terrível. Eles traçaram uma estratégia de defesa impecável, que resultou na absolvição completa. Devo minha liberdade e minha reputação a este escritório. O compromisso deles é real.",
       author: "A. Cavalcante",
       oab: "TRAIRI/CE",
       avatar: "https://i.pravatar.cc/150?img=18"
     },
     {
-      quote: "O melhor advogado criminalista da região.",
+      quote: "Em momentos de crise, a rapidez é tudo. Liguei para o escritório em uma situação de urgência e, em poucas horas, já tínhamos um advogado experiente atuando no caso, com total disponibilidade. O escritório não mediu esforços, trabalhando incansavelmente para proteger meus direitos. A dedicação 24/7 deles fez toda a diferença. Eu os recomendo a qualquer pessoa que precise de uma defesa criminal de excelência e alto nível.",
       author: "M. Ribeiro",
       oab: "TRAIRI/CE",
       avatar: "https://i.pravatar.cc/150?img=53"
