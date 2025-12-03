@@ -10,17 +10,36 @@
     <title>Colares & Silveira Advogados</title>
     <meta name="description" content="Especializados em Advocacia Criminal" />
     <meta name="author" content="Colares & Silveira" />
-
     <meta property="og:title" content="Colares & Silveira - Advocacia Criminal" />
     <meta property="og:description" content="Especializados em Advocacia Criminal." />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="https://i.ibb.co/KcqhVSQS/fundosite.png" />
-
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@lovable_dev" />
     <meta name="twitter:image" content="https://i.ibb.co/KcqhVSQS/fundosite.png" />
-  </head>
 
+    <!-- ==================== META PIXEL (Facebook) ==================== -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;s=f.fbq=function(){s.callMethod?
+      s.callMethod.apply(s,arguments):s.queue.push(arguments)};
+      if(!f._fbq)f._fbq=s;s.push=s;s.loaded=!0;s.version='2.0';
+      s.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;n=b.getElementsByTagName(e)[0];
+      n.parentNode.insertBefore(t,n)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+
+      fbq('init', '1118093889969900');
+      fbq('track', 'PageView');
+    </script>
+
+    <noscript>
+      <img height="1" width="1" style="display:none"
+           src="https://www.facebook.com/tr?id=1118093889969900&ev=PageView&noscript=1" />
+    </noscript>
+    <!-- ==================== FIM DO META PIXEL ==================== -->
+
+  </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
