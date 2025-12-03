@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/revisao-criminal/:path*",
+      "destination": "https://legal-method-redesign-04.vercel.app/:path*"
+    }
+  ]
+}
