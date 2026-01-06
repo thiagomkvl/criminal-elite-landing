@@ -31,10 +31,21 @@
       fbq('init', '1118093889969900');
       fbq('track', 'PageView');
     </script>
-    <!-- ==================== FIM DO META PIXEL (script) ==================== -->
+    <!-- ==================== FIM META PIXEL ==================== -->
+
+    <!-- ==================== Google Tag (gtag.js) - Google Ads ==================== -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17854512776"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-17854512776');
+    </script>
+    <!-- ==================== FIM Google Tag ==================== -->
+
   </head>
   <body>
-    <!-- Noscript do Meta Pixel movido para o body (resolve o erro do Vite) -->
+    <!-- Noscript do Meta Pixel (movido para o body para evitar erro no build do Vite) -->
     <noscript>
       <img height="1" width="1" style="display:none"
            src="https://www.facebook.com/tr?id=1118093889969900&ev=PageView&noscript=1" />
