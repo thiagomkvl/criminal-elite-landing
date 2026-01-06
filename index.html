@@ -28,19 +28,18 @@
       t.src=v;n=b.getElementsByTagName(e)[0];
       n.parentNode.insertBefore(t,n)}(window, document,'script',
       'https://connect.facebook.net/en_US/fbevents.js');
-
       fbq('init', '1118093889969900');
       fbq('track', 'PageView');
     </script>
-
+    <!-- ==================== FIM DO META PIXEL (script) ==================== -->
+  </head>
+  <body>
+    <!-- Noscript do Meta Pixel movido para o body (resolve o erro do Vite) -->
     <noscript>
       <img height="1" width="1" style="display:none"
            src="https://www.facebook.com/tr?id=1118093889969900&ev=PageView&noscript=1" />
     </noscript>
-    <!-- ==================== FIM DO META PIXEL ==================== -->
 
-  </head>
-  <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
